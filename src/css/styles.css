@@ -173,7 +173,7 @@ h2 {
 @media (max-width: 39.9375em) {
   h1,
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -436,7 +436,7 @@ p {
 
 @media (max-width: 63.9375em) {
   .hero__image-wrapper {
-    margin-top: 5rem;
+    margin-top: 2.5rem;
   }
 }
 

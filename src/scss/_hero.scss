@@ -27,7 +27,7 @@
     flex: 1;
 
     @include breakpoints-down(medium) {
-      margin-top: 5rem;
+      margin-top: 2.5rem;
     }
 
     @include breakpoints-down(small) {
