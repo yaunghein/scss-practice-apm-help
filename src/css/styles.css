@@ -41,6 +41,7 @@ a {
 
 .container {
   max-width: 1920px;
+  height: 100%;
   margin: 0 auto;
   padding: 0 5rem;
 }
@@ -106,11 +107,12 @@ a {
     left: 0;
     width: 100%;
     z-index: 311;
-    height: 3rem;
+    height: 4rem;
   }
 }
 
 .header nav {
+  height: 100%;
   padding: 1.5rem 0;
 }
 
@@ -185,7 +187,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 3rem);
+    height: calc(100% - 4rem);
     background: #ffefd6;
     display: -webkit-box;
     display: -ms-flexbox;

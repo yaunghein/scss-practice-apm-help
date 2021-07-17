@@ -6,9 +6,10 @@
     left: 0;
     width: 100%;
     z-index: 311;
-    height: 3rem;
+    height: 4rem;
   }
   nav {
+    height: 100%;
     padding: 1.5rem 0;
 
     @include breakpoints-down(medium) {
@@ -71,7 +72,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: calc(100% - 3rem);
+      height: calc(100% - 4rem);
       background: $clr-accent-bg;
       display: flex;
       flex-direction: column;
