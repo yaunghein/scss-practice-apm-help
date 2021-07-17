@@ -29,8 +29,8 @@
       transform: translate(-50%, -50%);
       background: $clr-brand-dark;
       border: 0.25rem solid $clr-light;
-      width: 4.5rem;
-      height: 4.5rem;
+      width: 5rem;
+      height: 5rem;
       border-radius: 100vw;
       display: flex;
       flex-direction: column;
@@ -145,9 +145,9 @@
           color: $clr-brand-dark;
         }
       }
-      @include breakpoints-down(small) {
-        font-size: 1.2rem;
-      }
+      // @include breakpoints-down(small) {
+      //   font-size: 1.2rem;
+      // }
     }
   }
 }

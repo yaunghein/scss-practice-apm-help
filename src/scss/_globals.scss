@@ -4,7 +4,7 @@ html {
   box-sizing: border-box;
 
   @include breakpoints-down(medium) {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 
@@ -85,6 +85,7 @@ a {
   border: 0.125rem solid $clr-brand;
   border-radius: 100vw;
   margin-right: 1.5rem;
+  margin-bottom: 1rem;
   @include transition-ease-in-out;
 
   &:hover {
@@ -142,7 +143,7 @@ h6 {
 p {
   max-width: 34rem;
 
-  @include breakpoints-down(medium) {
+  @include breakpoints-down(small) {
     max-width: 100%;
   }
 }
