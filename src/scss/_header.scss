@@ -57,6 +57,14 @@
     }
   }
 
+  @include breakpoints-down(medium) {
+    #nav-links {
+      .header__link {
+        font-size: $fs-large;
+      }
+    }
+  }
+
   &__links:not(&__links--contact) {
     @include breakpoints-down(medium) {
       position: fixed;
