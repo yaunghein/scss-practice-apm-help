@@ -1,0 +1,32 @@
+//Breakpoints
+$breakpoints-up: (
+  'medium': '40em',
+  //640px
+  'large': '64em',
+  //1024px
+  'xlarge': '87.5em',
+  //1400px
+);
+$breakpoints-down: (
+  'small': '39.9375em',
+  //634px
+  'medium': '63.9375em',
+  //1023px
+  'large': '87.4375em',
+  //1399px
+);
+@mixin breakpoints-up($size) {
+  @media (min-width: map-get($breakpoints-up , $size)) {
+    @content;
+  }
+}
+@mixin breakpoints-down($size) {
+  @media (max-width: map-get($breakpoints-down , $size)) {
+    @content;
+  }
+}
+
+//Transitions
+@mixin transition-ease-in-out {
+  transition: all 0.2s ease-in-out;
+}

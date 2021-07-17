@@ -1,0 +1,141 @@
+.header {
+  @include breakpoints-down(medium) {
+    background: $clr-accent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 311;
+    height: 3rem;
+  }
+  nav {
+    padding: 1.5rem 0;
+
+    @include breakpoints-down(medium) {
+      padding: 0.8rem 0;
+    }
+  }
+
+  &__logo {
+    width: 12rem;
+  }
+
+  &__menu {
+    @include breakpoints-down(medium) {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $clr-brand-dark;
+      border: 0.25rem solid $clr-light;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
+      display: block;
+      width: 2rem;
+      height: 0.15rem;
+      background: $clr-brand-dark;
+
+      @include breakpoints-down(medium) {
+        background: $clr-light;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.3rem;
+      }
+
+      &:last-child {
+        width: 1.2rem;
+      }
+    }
+  }
+
+  &__links:not(&__links--contact) {
+    @include breakpoints-down(medium) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 3rem);
+      background: $clr-accent-bg;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: -5;
+      visibility: hidden;
+      opacity: 0;
+
+      &.open {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__link-item {
+    margin: 0 1.2rem;
+
+    @include breakpoints-down(medium) {
+      margin: 1.5rem 0;
+    }
+  }
+
+  &__link {
+    font-size: $fs-small;
+    font-family: $ff-heading;
+    font-weight: 600;
+    position: relative;
+    @include transition-ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -0.75rem;
+      left: 0;
+      width: 100%;
+      height: 0.1875rem;
+      @include transition-ease-in-out;
+    }
+
+    &:hover {
+      color: $clr-accent;
+
+      &::before {
+        background: $clr-accent;
+      }
+    }
+  }
+
+  &__links--contact {
+    @include breakpoints-down(medium) {
+      width: 100%;
+      padding: 0;
+      color: $clr-light;
+    }
+    .header__link-item {
+      @include breakpoints-down(medium) {
+        margin: 0;
+
+        &:first-child {
+          order: 2;
+        }
+      }
+    }
+
+    .header__link {
+      @include breakpoints-down(medium) {
+        &:hover {
+          color: $clr-brand-dark;
+        }
+      }
+    }
+  }
+}
