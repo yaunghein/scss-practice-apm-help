@@ -1,0 +1,37 @@
+.hero {
+  height: 90vh;
+  padding-top: 2.5rem;
+  > .container {
+    @include breakpoints-down(small) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    margin-bottom: 2.5rem;
+
+    @include breakpoints-down(medium) {
+      display: none;
+    }
+    @include breakpoints-down(small) {
+      display: block;
+    }
+  }
+
+  &__content-wrapper {
+    flex: 1;
+  }
+
+  &__image-wrapper {
+    flex: 1;
+
+    @include breakpoints-down(medium) {
+      margin-top: 5rem;
+    }
+
+    @include breakpoints-down(small) {
+      width: 100%;
+    }
+  }
+}

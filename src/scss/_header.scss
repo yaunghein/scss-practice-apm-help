@@ -29,8 +29,8 @@
       transform: translate(-50%, -50%);
       background: $clr-brand-dark;
       border: 0.25rem solid $clr-light;
-      width: 4rem;
-      height: 4rem;
+      width: 4.5rem;
+      height: 4.5rem;
       border-radius: 100vw;
       display: flex;
       flex-direction: column;
@@ -144,6 +144,9 @@
         &:hover {
           color: $clr-brand-dark;
         }
+      }
+      @include breakpoints-down(small) {
+        font-size: 1.2rem;
       }
     }
   }

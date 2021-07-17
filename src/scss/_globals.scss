@@ -1,9 +1,10 @@
+//Global
 html {
   font-size: 1vw;
   box-sizing: border-box;
 
   @include breakpoints-down(medium) {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 
@@ -20,6 +21,10 @@ body {
   font-family: $ff-body;
   font-size: $fs-medium;
   line-height: 1.5;
+
+  @include breakpoints-down(small) {
+    text-align: center;
+  }
 }
 
 img {
@@ -33,6 +38,10 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.section {
+  padding: 5rem 0;
 }
 
 .container {
@@ -65,14 +74,33 @@ a {
 
 //Buttons
 .button {
+  display: inline-block;
   background: $clr-brand;
   color: $clr-light;
   font-size: $fs-small;
   font-weight: 600;
+  font-family: $ff-heading;
   text-transform: uppercase;
   padding: 1.25em 2em;
   border: 0.125rem solid $clr-brand;
   border-radius: 100vw;
+  margin-right: 1.5rem;
+  @include transition-ease-in-out;
+
+  &:hover {
+    background: $clr-brand-dark;
+    border-color: $clr-brand-dark;
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $clr-brand;
+    @include transition-ease-in-out;
+
+    &:hover {
+      background: darken($clr-light, 8%);
+    }
+  }
 }
 
 //Visibility
@@ -86,4 +114,56 @@ a {
   @include breakpoints-down(medium) {
     display: none;
   }
+}
+
+//Typographys
+h1 {
+  font-size: $fs-h1;
+  color: $clr-brand-dark;
+  line-height: 1.2;
+  text-transform: capitalize;
+  max-width: 40rem;
+  font-weight: 700;
+  font-family: $ff-heading;
+
+  @include breakpoints-down(medium) {
+    max-width: 100%;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: $clr-brand-dark;
+  font-weight: 600;
+  font-family: $ff-heading;
+}
+
+p {
+  max-width: 34rem;
+
+  @include breakpoints-down(medium) {
+    max-width: 100%;
+  }
+}
+
+.pale-blue-text {
+  color: $clr-brand;
+}
+
+//Spacings
+.mb-8 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 1rem;
+}
+
+.mb-24 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
 }

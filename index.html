@@ -13,6 +13,7 @@
     <title>SCSS Practice by Yaung Hein | APM Help Property Management Consulting</title>
   </head>
   <body>
+    <!-- ########## Header ########## -->
     <header class="header">
       <div class="container">
         <nav class="flex flex-jc-sb flex-ai-c">
@@ -48,17 +49,36 @@
 
           <ul class="header__links header__links--contact flex flex-jc-sb flex-ai-c">
             <li class="header__link-item">
-              <a href="#" class="header__link">+95 996 232 3716</a>
+              <a href="tel:+959962323716" class="header__link">+95 996 232 3716</a>
             </li>
             <li class="header__link-item">
-              <a href="#" class="header__link">yaunghein@protonmail.com</a>
+              <a href="mailto:yaunghein@protonmail.com" class="header__link">yaunghein@protonmail.com</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <section>
-      <h1>Yaung Hein</h1>
+
+    <!-- ########## Hero ########## -->
+    <section class="section hero">
+      <div class="container flex flex-ai-c">
+        <img src="./images/logo.png" alt="APM Help" class="hero__logo hide-for-desktop" />
+        <div class="hero__content-wrapper">
+          <h6 class="sub-title hero__sub-title mb-8">Your one stop agency for</h6>
+          <h1 class="hero__title mb-24">Property management accounting <span class="pale-blue-text">experts</span></h1>
+          <p class="hero__p mb-32">
+            Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies
+            - we're here to help. Let us show you what we can do for your business - the first 30 minutes are on us.
+          </p>
+          <div class="button-wrapper">
+            <a href="#" class="button">Get in tough with us</a>
+            <a href="#" class="button button--ghost">Watch video</a>
+          </div>
+        </div>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="./images/home-hero.jpg" alt="property management softwares expert" />
+        </div>
+      </div>
     </section>
 
     <script src="./src/js/script.js"></script>
