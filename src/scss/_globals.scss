@@ -4,7 +4,7 @@ html {
   box-sizing: border-box;
 
   @include breakpoints-down(medium) {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -85,8 +85,12 @@ a {
   border: 0.125rem solid $clr-brand;
   border-radius: 100vw;
   margin-right: 1.5rem;
-  margin-bottom: 1rem;
   @include transition-ease-in-out;
+
+  @include breakpoints-down(small) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 
   &:hover {
     background: $clr-brand-dark;
@@ -104,6 +108,14 @@ a {
   }
 }
 
+.buttons-wrapper {
+  @include breakpoints-down(small) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 //Visibility
 .hide-for-desktop {
   @include breakpoints-up(large) {
@@ -118,7 +130,8 @@ a {
 }
 
 //Typographys
-h1 {
+h1,
+h2 {
   font-size: $fs-h1;
   color: $clr-brand-dark;
   line-height: 1.2;
@@ -129,6 +142,10 @@ h1 {
 
   @include breakpoints-down(medium) {
     max-width: 100%;
+  }
+
+  @include breakpoints-down(small) {
+    font-size: 2.4rem;
   }
 }
 

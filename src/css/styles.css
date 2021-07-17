@@ -6,7 +6,7 @@ html {
 
 @media (max-width: 63.9375em) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -98,9 +98,15 @@ a {
   border: 0.125rem solid #4b7cb4;
   border-radius: 100vw;
   margin-right: 1.5rem;
-  margin-bottom: 1rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 39.9375em) {
+  .button {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 .button:hover {
@@ -119,6 +125,21 @@ a {
   background: #ebebeb;
 }
 
+@media (max-width: 39.9375em) {
+  .buttons-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (min-width: 64em) {
   .hide-for-desktop {
     display: none;
@@ -131,7 +152,8 @@ a {
   }
 }
 
-h1 {
+h1,
+h2 {
   font-size: 3rem;
   color: #123463;
   line-height: 1.2;
@@ -142,8 +164,16 @@ h1 {
 }
 
 @media (max-width: 63.9375em) {
-  h1 {
+  h1,
+  h2 {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  h1,
+  h2 {
+    font-size: 2.4rem;
   }
 }
 
