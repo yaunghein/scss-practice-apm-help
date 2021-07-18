@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/components/effect-fade/effect-fade.min.css" />
     <link rel="stylesheet" href="./src/css/styles.css" />
     <title>SCSS Practice by Yaung Hein | APM Help Property Management Consulting</title>
   </head>
@@ -205,7 +207,68 @@
           <p class="mb-32 long">Here’s what our clients are saying about APM Help’s rental property management.</p>
           <a href="#" class="button button--ghost">See all reviews</a>
         </div>
-        <div class="slider">Slider</div>
+        <!-- Swiper Slider -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="review">
+                <img src="./images/quote.svg" alt="" class="review__quote" />
+                <p class="review__p">
+                  All along the way, they kept us informed, asked clarifying questions, and communicated fully to us. My
+                  accounts are now what I would call “audit proof.” Having the APM system perform daily audit checks
+                  along with the APM team performing the monthly Trust Account.<br /><br />
+                  Reconciliation is something that we make sure our owners know about and gives them, along with
+                  potential new clients, and added layer of confidence in our company.
+                </p>
+                <div class="review__profile">
+                  <img src="./images/avater.jpg" alt="" class="review__avater" />
+                  <h5 class="review__name">Robert Dell’Osso</h5>
+                  <p class="review__job">Master Key Property Management</p>
+                </div>
+              </div>
+            </div>
+            <!-- Second -->
+            <div class="swiper-slide">
+              <div class="review">
+                <img src="./images/quote.svg" alt="" class="review__quote" />
+                <p class="review__p">
+                  Reconciliation is something that we make sure our owners know about and gives them, along with
+                  potential new clients, and added layer of confidence in our company.
+                  <br /><br />
+                  All along the way, they kept us informed, asked clarifying questions, and communicated fully to us. My
+                  accounts are now what I would call “audit proof.” Having the APM system perform daily audit checks
+                  along with the APM team performing the monthly Trust Account.
+                </p>
+                <div class="review__profile">
+                  <img src="./images/avater.jpg" alt="" class="review__avater" />
+                  <h5 class="review__name">Robert Dell’Osso</h5>
+                  <p class="review__job">Master Key Property Management</p>
+                </div>
+              </div>
+            </div>
+            <!-- Third -->
+            <div class="swiper-slide">
+              <div class="review">
+                <img src="./images/quote.svg" alt="" class="review__quote" />
+                <p class="review__p">
+                  All along the way, they kept us informed, asked clarifying questions, and communicated fully to us. My
+                  accounts are now what I would call “audit proof.” Having the APM system perform daily audit checks
+                  along with the APM team performing the monthly Trust Account.<br /><br />
+                  Reconciliation is something that we make sure our owners know about and gives them, along with
+                  potential new clients, and added layer of confidence in our company.
+                </p>
+                <div class="review__profile">
+                  <img src="./images/avater.jpg" alt="" class="review__avater" />
+                  <h5 class="review__name">Robert Dell’Osso</h5>
+                  <p class="review__job">Master Key Property Management</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
 
@@ -339,6 +402,7 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./src/js/script.js"></script>
   </body>
 </html>

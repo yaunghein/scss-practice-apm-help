@@ -674,6 +674,64 @@ p {
   width: 13.6875rem;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 39.9375em) {
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+.review__quote {
+  margin-bottom: 1rem;
+}
+
+.review__profile {
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.review__avater {
+  width: 5.5rem;
+}
+
+.review__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4b7cb4;
+  font-family: "Montserrat", sans-serif;
+}
+
+.review__job {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
 .cta .cta-wrapper {
   background: #ffefd6;
   width: 100%;
