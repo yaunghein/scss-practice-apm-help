@@ -17,6 +17,12 @@
       width: 100%;
       text-align: left;
     }
+
+    &:last-child {
+      @include breakpoints-down(small) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__image {

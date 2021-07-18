@@ -2,6 +2,7 @@
 html {
   font-size: 1vw;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
   @include breakpoints-down(medium) {
     font-size: 14px;
@@ -46,6 +47,10 @@ a {
 
   &--bg-pale-blue {
     background: $clr-brand-bg;
+  }
+
+  &--bg-accent {
+    background: $clr-accent-bg;
   }
 }
 
@@ -264,6 +269,10 @@ p {
 }
 
 //Spacings
+.p0 {
+  padding: 0;
+}
+
 .mb-8 {
   margin-bottom: 0.5rem;
 }

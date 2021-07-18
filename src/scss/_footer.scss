@@ -1,0 +1,138 @@
+.footer {
+  padding: 5rem 0 0;
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+
+    img {
+      width: 12rem;
+
+      @include breakpoints-down(small) {
+        align-self: center;
+      }
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints-down(small) {
+      margin-bottom: 2.5rem;
+    }
+
+    &:nth-child(1) {
+      flex: 3;
+
+      @include breakpoints-down(small) {
+        flex: unset;
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      flex: 2;
+
+      @include breakpoints-down(small) {
+        flex: unset;
+        width: 100%;
+      }
+    }
+    &:nth-child(3) {
+      flex: 4;
+
+      @include breakpoints-down(small) {
+        flex: unset;
+        width: 100%;
+      }
+    }
+    &:nth-child(4) {
+      flex: 3;
+
+      @include breakpoints-down(small) {
+        flex: unset;
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    font-size: $fs-small;
+    font-family: $ff-body;
+    font-weight: 600;
+    margin: 0.25rem 0;
+    color: $clr-brand-dark;
+    position: relative;
+    @include transition-ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      @include transition-ease-in-out;
+
+      @include breakpoints-down(small) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      padding-left: 0.4rem;
+      color: $clr-accent;
+
+      @include breakpoints-down(small) {
+        padding-left: unset;
+      }
+
+      &::before {
+        width: 0.125rem;
+        background: $clr-accent;
+      }
+    }
+  }
+
+  &__disclaimer {
+    font-size: 1rem;
+    font-family: $ff-body;
+    font-weight: 600;
+  }
+
+  &__bottom {
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.0625rem solid #e6e8ea;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+      padding-bottom: 7rem;
+    }
+  }
+
+  &__copy-right,
+  .find-us-on {
+    font-size: $fs-small;
+    font-family: $ff-heading;
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 11rem;
+    @include breakpoints-down(small) {
+      order: -1;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__social-link {
+    margin: 0 0.125rem;
+  }
+}
