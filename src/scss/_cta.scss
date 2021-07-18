@@ -1,0 +1,25 @@
+.cta {
+  .cta-wrapper {
+    background: $clr-accent-bg;
+    width: 100%;
+    padding: 5rem 2.5rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__heading {
+    max-width: 43.75rem;
+  }
+
+  &__image {
+    position: absolute;
+    top: -7rem;
+    right: -1rem;
+    width: 33.25rem;
+
+    @include breakpoints-down(medium) {
+      display: none;
+    }
+  }
+}

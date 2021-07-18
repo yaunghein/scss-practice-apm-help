@@ -1,0 +1,51 @@
+.home-blog {
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    width: 32%;
+
+    @include breakpoints-down(medium) {
+      width: 48%;
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoints-down(small) {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 18.75rem;
+    border-radius: 1rem;
+  }
+
+  &__sub-heading {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: $clr-accent;
+    letter-spacing: 0.15rem;
+  }
+
+  &__heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    color: $clr-text;
+    padding: 0;
+
+    &:hover {
+      background: $clr-light;
+      color: $clr-text;
+    }
+  }
+}

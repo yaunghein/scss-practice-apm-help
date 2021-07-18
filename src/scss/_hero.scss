@@ -1,6 +1,11 @@
 .hero {
   height: 90vh;
   padding-top: 2.5rem;
+
+  @include breakpoints-down(small) {
+    height: auto;
+  }
+
   > .container {
     @include breakpoints-down(small) {
       flex-direction: column;

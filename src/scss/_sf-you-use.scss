@@ -1,0 +1,45 @@
+.sf-you-use {
+  .sf-logos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include breakpoints-down(medium) {
+      justify-content: center;
+    }
+
+    .sf-logo {
+      filter: grayscale(100%);
+      @include transition-ease-in-out;
+
+      @include breakpoints-down(medium) {
+        margin: 2rem;
+      }
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    .sf-logo:nth-child(1) {
+      width: 8.75rem;
+    }
+    .sf-logo:nth-child(2) {
+      width: 9rem;
+    }
+    .sf-logo:nth-child(3) {
+      width: 10.8125rem;
+    }
+    .sf-logo:nth-child(4) {
+      width: 8.5rem;
+    }
+    .sf-logo:nth-child(5) {
+      width: 12rem;
+    }
+    .sf-logo:nth-child(6) {
+      width: 13.6875rem;
+    }
+  }
+}

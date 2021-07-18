@@ -29,6 +29,7 @@ body {
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 ul {
@@ -42,6 +43,10 @@ a {
 
 .section {
   padding: 5rem 0;
+
+  &--bg-pale-blue {
+    background: $clr-brand-bg;
+  }
 }
 
 .container {
@@ -53,6 +58,55 @@ a {
   @include breakpoints-down(medium) {
     padding: 0 1.5rem;
   }
+}
+
+.split-column-wrapper {
+  max-width: 66.5rem;
+  margin: 0 auto;
+
+  .split-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+      margin-bottom: 5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+
+      @include breakpoints-down(small) {
+        flex-direction: column;
+      }
+    }
+
+    .column-one {
+      width: 40%;
+
+      @include breakpoints-down(small) {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .column-two {
+      width: 50%;
+
+      @include breakpoints-down(small) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.heading-wrapper {
+  text-align: center;
 }
 
 //Flexbox
@@ -69,6 +123,10 @@ a {
 
   &-ai-c {
     align-items: center;
+  }
+
+  &-d-column {
+    flex-direction: column;
   }
 }
 
@@ -106,6 +164,21 @@ a {
       background: darken($clr-light, 8%);
     }
   }
+
+  &--orange {
+    background: $clr-accent;
+    border-color: $clr-accent;
+    @include transition-ease-in-out;
+
+    &:hover {
+      background: darken($clr-accent, 8%);
+      border-color: darken($clr-accent, 8%);
+    }
+  }
+
+  &.m0 {
+    margin-bottom: 0;
+  }
 }
 
 .buttons-wrapper {
@@ -132,7 +205,7 @@ a {
 //Typographys
 h1,
 h2 {
-  font-size: $fs-h1;
+  font-size: $fs-h2;
   color: $clr-brand-dark;
   line-height: 1.2;
   text-transform: capitalize;
@@ -145,12 +218,21 @@ h2 {
   }
 
   @include breakpoints-down(small) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
+}
+
+h3 {
+  font-size: 1.375rem;
+  color: $clr-brand-dark;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: $ff-heading;
 }
 
 h6 {
   font-size: 1rem;
+  line-height: 1.2;
   text-transform: uppercase;
   color: $clr-brand-dark;
   font-weight: 600;
@@ -163,6 +245,18 @@ p {
   @include breakpoints-down(small) {
     max-width: 100%;
   }
+}
+
+.big {
+  font-size: $fs-h1;
+
+  @include breakpoints-down(small) {
+    font-size: 2rem;
+  }
+}
+
+.long {
+  max-width: 60.25rem;
 }
 
 .pale-blue-text {
@@ -184,4 +278,24 @@ p {
 
 .mb-32 {
   margin-bottom: 2rem;
+}
+
+.mb-40 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-64 {
+  margin-bottom: 4rem;
+
+  @include breakpoints-down(small) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.mb-80 {
+  margin-bottom: 5rem;
+
+  @include breakpoints-down(small) {
+    margin-bottom: 4rem;
+  }
 }
