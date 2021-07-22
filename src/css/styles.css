@@ -927,8 +927,7 @@ p {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    padding-top: 0;
-    padding-bottom: 5rem;
+    padding: 0 0 5rem;
   }
 }
 
@@ -955,6 +954,9 @@ p {
   border-radius: 0.25rem;
   padding: 0 1.5rem;
   font-size: 0.875rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 @media (max-width: 39.9375em) {
