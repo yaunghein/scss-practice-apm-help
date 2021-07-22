@@ -1,12 +1,14 @@
 @import './mixins';
 //Colors
 $clr-brand: hsl(212, 41%, 50%);
-$clr-brand-bg: hsl(212, 41%, 95%);
+$clr-brand-bg: hsl(210, 40%, 98%);
 $clr-brand-dark: hsl(215, 69%, 23%);
 $clr-accent: hsl(36, 100%, 64%);
 $clr-accent-bg: hsl(36, 100%, 92%);
 $clr-text: hsl(214, 25%, 24%);
 $clr-light: hsl(0, 0%, 100%);
+$clr-off-white: hsl(240, 6%, 97%);
+$clr-off-dark: hsl(210, 9%, 91%);
 
 //Typography
 $ff-heading: 'Montserrat', sans-serif;

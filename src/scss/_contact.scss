@@ -1,0 +1,87 @@
+.contact {
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__info-wrapper {
+    width: 40%;
+    background: $clr-brand-bg;
+    border-radius: 1rem;
+    padding: 2.5rem;
+
+    @include breakpoints-down(small) {
+      width: 100%;
+    }
+  }
+
+  &__form {
+    @include breakpoints-down(small) {
+      text-align: left;
+    }
+  }
+
+  &__info-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__info-label {
+    font-size: $fs-small;
+    font-family: $ff-heading;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.5;
+    letter-spacing: 0.15rem;
+  }
+
+  &__info-info {
+    font-size: $fs-medium;
+    font-family: $ff-body;
+    font-weight: 400;
+    max-width: 20rem;
+
+    @include breakpoints-down(small) {
+      max-width: 100%;
+    }
+  }
+
+  &__form-wrapper {
+    width: 60%;
+    padding: 2.5rem;
+
+    @include breakpoints-down(small) {
+      width: 100%;
+      order: -1;
+      padding-top: 0;
+      padding-bottom: 5rem;
+    }
+  }
+
+  &__form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-label {
+    font-size: $fs-small;
+    font-family: $ff-body;
+    font-weight: 600;
+  }
+
+  &__form-input {
+    height: 3rem;
+    background: $clr-off-white;
+    border: 0.0625rem solid $clr-off-dark;
+    border-radius: 0.25rem;
+    padding: 0 1.5rem;
+    font-size: $fs-small;
+  }
+
+  &__button {
+    @include breakpoints-down(small) {
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,12 +1,27 @@
 .cta {
   .cta-wrapper {
-    background: $clr-accent-bg;
+    background: $clr-brand-bg;
     width: 100%;
     padding: 5rem 2.5rem;
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 
+    @include breakpoints-down(medium) {
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $clr-brand-bg url('../../images/cta-placeholder-image.png') no-repeat center top;
+        background-size: contain;
+        transform: scale(1.7);
+        opacity: 0.2;
+        z-index: -1;
+      }
+    }
+
+    //delete later if not needed
     &--imageless {
       display: flex;
       flex-direction: column;
