@@ -1,8 +1,10 @@
 //Menu
 const menuBtn = document.getElementById('menu-btn');
+const menuText = document.getElementById('menu-text');
 const navLinks = document.getElementById('nav-links');
 menuBtn.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  navLinks.classList.contains('open') ? (menuText.textContent = 'CLOSE') : (menuText.textContent = 'MENU');
 });
 
 //Changing contact info based on screen size

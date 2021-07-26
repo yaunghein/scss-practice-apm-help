@@ -137,7 +137,7 @@ a {
 
 @media (max-width: 39.9375em) {
   .split-column-wrapper .split-column .column-two {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -428,24 +428,8 @@ p {
 }
 
 .header__menu span {
-  display: block;
-  width: 2rem;
-  height: 0.15rem;
-  background: #123463;
-}
-
-@media (max-width: 63.9375em) {
-  .header__menu span {
-    background: white;
-  }
-}
-
-.header__menu span:not(:last-child) {
-  margin-bottom: 0.3rem;
-}
-
-.header__menu span:last-child {
-  width: 1.2rem;
+  font-size: 0.875rem;
+  color: white;
 }
 
 @media (max-width: 63.9375em) {
@@ -476,11 +460,45 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
     z-index: -5;
-    visibility: hidden;
+    -webkit-clip-path: circle(0px at 100% 0%);
+            clip-path: circle(0px at 100% 0%);
+    -webkit-transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .header__links:not(.header__links--contact) .header__link-item {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
     opacity: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .header__links:not(.header__links--contact) .header__link-item:nth-child(1) {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+  .header__links:not(.header__links--contact) .header__link-item:nth-child(2) {
+    -webkit-transition-delay: 0.45s;
+            transition-delay: 0.45s;
+  }
+  .header__links:not(.header__links--contact) .header__link-item:nth-child(3) {
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+  }
+  .header__links:not(.header__links--contact) .header__link-item:nth-child(4) {
+    -webkit-transition-delay: 0.55s;
+            transition-delay: 0.55s;
+  }
+  .header__links:not(.header__links--contact) .header__link-item:nth-child(5) {
+    -webkit-transition-delay: 0.6s;
+            transition-delay: 0.6s;
   }
   .header__links:not(.header__links--contact).open {
-    visibility: visible;
+    -webkit-clip-path: circle(900px at 100% 0%);
+            clip-path: circle(900px at 100% 0%);
+  }
+  .header__links:not(.header__links--contact).open .header__link-item {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
