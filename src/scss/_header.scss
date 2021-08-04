@@ -1,16 +1,19 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $clr-light;
+  z-index: 311;
+
   @include breakpoints-down(medium) {
     background: $clr-accent;
-    position: fixed;
+    top: unset;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 311;
     height: 4rem;
   }
   nav {
     height: 100%;
-    padding: 1.5rem 0;
 
     @include breakpoints-down(medium) {
       padding: 0.8rem 0;
@@ -36,6 +39,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      z-index: 1000;
     }
 
     span {
@@ -103,9 +107,14 @@
 
   &__link-item {
     margin: 0 1.2rem;
+    padding: 1.5rem 0;
 
     @include breakpoints-down(medium) {
       margin: 1.5rem 0;
+    }
+
+    &:hover > .header__link {
+      color: $clr-accent;
     }
   }
 
@@ -115,24 +124,6 @@
     font-weight: 600;
     position: relative;
     @include transition-ease-in-out;
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -0.75rem;
-      left: 0;
-      width: 100%;
-      height: 0.1875rem;
-      @include transition-ease-in-out;
-    }
-
-    &:hover {
-      color: $clr-accent;
-
-      &::before {
-        background: $clr-accent;
-      }
-    }
   }
 
   &__links--contact {
@@ -158,5 +149,78 @@
         }
       }
     }
+  }
+}
+
+//Dropdown
+.header__link-item {
+  position: relative;
+  width: 100%;
+  z-index: 900;
+
+  .dropdown {
+    position: fixed;
+    top: 4.15em;
+    left: 0;
+    // opacity: 0;
+    // visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+    z-index: 1000;
+    background: lighten($clr-off-white, 1%);
+    @include transition-ease-in-out;
+
+    @include breakpoints-down(small) {
+      position: static;
+      width: 100%;
+      padding: 0 1.5rem;
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 23%;
+      padding: 1.5rem;
+      margin: 1em 0;
+      transform: translate(0, 0);
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: $clr-light;
+        transform: translate(0.2em, -0.2em);
+      }
+
+      @include breakpoints-down(small) {
+        width: 100%;
+      }
+    }
+
+    &__heading,
+    &__btn-text {
+      font-size: $fs-small;
+      text-transform: uppercase;
+      color: $clr-brand;
+      font-weight: 600;
+    }
+
+    &__p {
+      font-size: $fs-small;
+
+      @include breakpoints-down(small) {
+        display: none;
+      }
+    }
+
+    &__btn-text {
+      @include breakpoints-down(small) {
+        display: none;
+      }
+    }
+  }
+
+  //when hover nav link, dropdown will open
+  &:hover > .dropdown {
+    opacity: 1;
+    visibility: unset;
   }
 }

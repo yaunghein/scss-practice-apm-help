@@ -166,7 +166,9 @@ a {
     @include transition-ease-in-out;
 
     &:hover {
-      background: darken($clr-light, 8%);
+      background: $clr-brand;
+      border-color: $clr-brand;
+      color: $clr-light;
     }
   }
 

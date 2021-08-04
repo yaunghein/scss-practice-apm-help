@@ -1,9 +1,10 @@
 .hero {
-  height: 90vh;
-  padding-top: 2.5rem;
+  padding: 0;
+  padding-top: 5em;
 
   @include breakpoints-down(small) {
     height: auto;
+    padding-top: 2.5em;
   }
 
   > .container {
@@ -32,11 +33,15 @@
     flex: 1;
 
     @include breakpoints-down(medium) {
-      margin-top: 2.5rem;
+      margin-top: 0;
     }
 
     @include breakpoints-down(small) {
       width: 100%;
+    }
+
+    & > img {
+      transform: translateY(0.8em);
     }
   }
 }

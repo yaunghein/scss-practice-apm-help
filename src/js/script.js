@@ -9,15 +9,9 @@ menuBtn.addEventListener('click', () => {
 
 //Changing contact info based on screen size
 const contactLinks = document.querySelectorAll('.header__links--contact > .header__link-item > .header__link');
-window.addEventListener('resize', () => {
-  if (window.innerWidth < 640) {
-    contactLinks[1].textContent = 'Speak With Us';
-  } else {
-    contactLinks[1].textContent = 'yaunghein@protonmail.com';
-  }
-});
 if (window.innerWidth < 640) {
   contactLinks[1].textContent = 'Speak With Us';
+  contactLinks[1].setAttribute('href', '#contact');
 }
 
 //Review Slider
@@ -38,4 +32,9 @@ const swiper = new Swiper('.swiper-container', {
   autoplay: {
     delay: 5000,
   },
+});
+
+//Smooth Scroll
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 200,
 });
