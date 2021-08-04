@@ -51,7 +51,7 @@
   @include breakpoints-down(medium) {
     #nav-links {
       .header__link {
-        font-size: $fs-large;
+        font-size: $fs-medium;
       }
     }
   }
@@ -63,11 +63,12 @@
       left: 0;
       width: 100%;
       height: calc(100% - 4rem);
-      background: $clr-accent-bg;
+      background: lighten($clr-accent-bg, 6%);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
+      padding-top: 2.5rem;
       z-index: -5;
       clip-path: circle(0px at 100% 0%);
       transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -110,7 +111,8 @@
     padding: 1.5rem 0;
 
     @include breakpoints-down(medium) {
-      margin: 1.5rem 0;
+      margin: 1em 0;
+      padding: 0;
     }
 
     &:hover > .header__link {
@@ -157,13 +159,16 @@
   position: relative;
   width: 100%;
   z-index: 900;
+  @include breakpoints-down(medium) {
+    padding: 0 1.5em;
+  }
 
   .dropdown {
     position: fixed;
     top: 4.15em;
     left: 0;
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     display: flex;
     flex-wrap: wrap;
     padding: 0 5rem;
@@ -173,9 +178,13 @@
 
     @include breakpoints-down(small) {
       position: static;
+      height: 0;
+      overflow: hidden;
       width: 100%;
-      padding: 0 1.5rem;
       flex-direction: column;
+      background: $clr-off-white;
+      border-radius: 1rem;
+      @include transition-ease-in-out;
     }
 
     &__item {
@@ -191,7 +200,14 @@
       }
 
       @include breakpoints-down(small) {
+        margin: 0.4rem 0;
         width: 100%;
+        padding: 0;
+
+        &:hover {
+          background: $clr-off-white;
+          transform: unset;
+        }
       }
     }
 
@@ -201,6 +217,17 @@
       text-transform: uppercase;
       color: $clr-brand;
       font-weight: 600;
+      @include transition-ease-in-out;
+
+      @include breakpoints-down(small) {
+        margin: 0;
+        text-transform: capitalize;
+        color: $clr-brand-dark;
+
+        &:hover {
+          color: $clr-accent;
+        }
+      }
     }
 
     &__p {
@@ -222,5 +249,13 @@
   &:hover > .dropdown {
     opacity: 1;
     visibility: unset;
+  }
+
+  @include breakpoints-down(small) {
+    &:hover > .dropdown {
+      transform: translateY(0.8em);
+      padding: 0.6rem;
+      height: auto;
+    }
   }
 }
