@@ -400,8 +400,8 @@ p {
             transform: translateY(160%);
     -webkit-animation: animate-header 0.4s ease-in-out forwards;
             animation: animate-header 0.4s ease-in-out forwards;
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
   }
   @-webkit-keyframes animate-header {
     0% {
