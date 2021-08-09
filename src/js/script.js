@@ -1,10 +1,18 @@
 //Menu
 const menuBtn = document.getElementById('menu-btn');
 const menuText = document.getElementById('menu-text');
-const navLinks = document.getElementById('nav-links');
+const navLinkContainer = document.getElementById('nav-links');
 menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  navLinks.classList.contains('open') ? (menuText.textContent = 'CLOSE') : (menuText.textContent = 'MENU');
+  navLinkContainer.classList.toggle('open');
+  navLinkContainer.classList.contains('open') ? (menuText.textContent = 'CLOSE') : (menuText.textContent = 'MENU');
+});
+const headerLinks = Array.from(document.getElementsByClassName('header__link'));
+console.log(headerLinks);
+headerLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinkContainer.classList.remove('open');
+    menuText.textContent = 'MENU';
+  });
 });
 
 //Changing contact info based on screen size
