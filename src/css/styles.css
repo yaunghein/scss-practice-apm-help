@@ -281,7 +281,7 @@ h2 {
 @media (max-width: 39.9375em) {
   h1,
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -290,7 +290,14 @@ h3 {
   color: #123463;
   font-weight: 700;
   line-height: 1.2;
+  text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 39.9375em) {
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 h6 {
@@ -912,6 +919,10 @@ p {
   margin-bottom: 1rem;
 }
 
+.review__p {
+  font-size: 1.125rem;
+}
+
 .review__profile {
   margin-top: 2.5rem;
   margin-bottom: 4rem;
@@ -948,7 +959,7 @@ p {
     content: '';
     position: absolute;
     inset: 0;
-    background: #f8fafc url("../../images/cta-placeholder-image.png") no-repeat center top;
+    background: #4b7cb4;
     background-size: contain;
     -webkit-transform: scale(1.7);
             transform: scale(1.7);
@@ -1044,7 +1055,6 @@ p {
 }
 
 .home-blog__heading {
-  font-size: 1.75rem;
   font-weight: 700;
 }
 

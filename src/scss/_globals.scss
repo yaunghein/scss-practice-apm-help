@@ -225,7 +225,7 @@ h2 {
   }
 
   @include breakpoints-down(small) {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -234,7 +234,11 @@ h3 {
   color: $clr-brand-dark;
   font-weight: 700;
   line-height: 1.2;
+  text-transform: capitalize;
   font-family: $ff-heading;
+  @include breakpoints-down(small) {
+    font-size: 1.2rem;
+  }
 }
 
 h6 {

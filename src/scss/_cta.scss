@@ -13,7 +13,8 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: $clr-brand-bg url('../../images/cta-placeholder-image.png') no-repeat center top;
+        // background: $clr-brand-bg url('../../images/cta-placeholder-image.png') no-repeat center top;
+        background: $clr-brand;
         background-size: contain;
         transform: scale(1.7);
         opacity: 0.2;
