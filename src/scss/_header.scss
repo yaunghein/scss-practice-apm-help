@@ -11,16 +11,16 @@
     top: unset;
     bottom: 0;
     height: 4rem;
-    transform: translateY(160%);
+    opacity: 0;
     animation: animate-header 0.4s ease-in-out forwards;
     animation-delay: 1.2s;
 
     @keyframes animate-header {
       0% {
-        transform: translateY(160%);
+        opacity: 0;
       }
       100% {
-        transform: translateY(0%);
+        opacity: 1;
       }
     }
   }
@@ -41,7 +41,7 @@
     @include breakpoints-down(medium) {
       padding: 0.8rem 0;
       animation: none;
-      transform: translateY(0);
+      transform: unset;
     }
 
     @include breakpoints-down(small) {
@@ -147,7 +147,6 @@
 
   &__link-item {
     margin: 0 1.2rem;
-    padding: 1.5rem 0;
 
     @include breakpoints-down(medium) {
       margin: 1em 0;
@@ -163,6 +162,8 @@
     font-size: $fs-small;
     font-family: $ff-heading;
     font-weight: 600;
+    display: inline-block;
+    padding: 1.5rem 0;
     position: relative;
     @include transition-ease-in-out;
   }

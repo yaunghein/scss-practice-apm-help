@@ -17,7 +17,6 @@ if (window.innerWidth < 640) {
 
 //Remove hashtag in url
 const linkTags = Array.from(document.getElementsByTagName('a'));
-console.log(linkTags);
 linkTags.forEach(link => {
   link.addEventListener('click', () => {
     setTimeout(() => {
@@ -49,4 +48,34 @@ const swiper = new Swiper('.swiper-container', {
 //Smooth Scroll
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 200,
+});
+
+//Show alert when click on link
+const alertBox = document.getElementsByClassName('alert')[0];
+const linkTagsToAddAlertClass = Array.from(document.getElementsByTagName('a'));
+linkTagsToAddAlertClass.forEach(link => {
+  if (
+    !link.classList.contains('hero-btn') &&
+    !link.classList.contains('header__menu') &&
+    !link.classList.contains('header__link--contact')
+  ) {
+    link.classList.add('alert-link');
+  }
+});
+const alertLinks = Array.from(document.getElementsByClassName('alert-link'));
+const showAlerBox = () => {
+  alertBox.classList.add('open');
+  setTimeout(() => {
+    alertBox.classList.remove('open');
+  }, 5000);
+};
+alertLinks.forEach(link => {
+  link.addEventListener('click', showAlerBox);
+});
+const contactForm = document.getElementsByClassName('contact__form')[0];
+const contactBtn = document.getElementsByClassName('contact__button')[0];
+contactBtn.addEventListener('click', e => {
+  e.preventDefault();
+  contactForm.reset();
+  showAlerBox();
 });

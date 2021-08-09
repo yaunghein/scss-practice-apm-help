@@ -134,5 +134,10 @@
 
   &__social-link {
     margin: 0 0.125rem;
+    width: 1.2em;
+
+    &:last-child {
+      margin-bottom: -0.05em;
+    }
   }
 }

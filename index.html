@@ -22,11 +22,15 @@
     <title>SCSS Practice by Yaung Hein | APM Help Property Management Consulting</title>
   </head>
   <body>
+    <span class="alert"
+      >Because this is a practise project, links will go no where 😂. You can see source code
+      <a target="blank" href="https://github.com/yaunghein/scss-practice-apm-help">here</a>.</span
+    >
     <!-- ########## Header ########## -->
     <header class="header">
       <div class="container header-container">
         <nav class="flex flex-jc-sb flex-ai-c">
-          <a href="/" class="header__logo hide-for-mobile">
+          <a href="#!" class="header__logo hide-for-mobile">
             <img src="./images/logo.png" alt="APM Help" />
           </a>
 
@@ -38,7 +42,7 @@
 
           <ul class="header__links flex flex-ai-c hide-for-mobile" id="nav-links">
             <li class="header__link-item">
-              <a href="#" class="header__link">Services</a>
+              <a href="#!" class="header__link">Services</a>
               <ul class="dropdown">
                 <!-- Dropdown Link 1 -->
                 <li class="dropdown__item">
@@ -82,10 +86,10 @@
                     <p class="dropdown__btn-text">Learn More</p>
                   </a>
                 </li>
-                <!-- Dropdown Link 4 -->
+                <!-- Dropdown Link 5 -->
                 <li class="dropdown__item">
                   <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Daily Bank Reconciliations</p>
+                    <p class="dropdown__heading mb-8">daily Audits</p>
                     <p class="dropdown__p mb-24">
                       Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
                       Buildium.
@@ -93,10 +97,10 @@
                     <p class="dropdown__btn-text">Learn More</p>
                   </a>
                 </li>
-                <!-- Dropdown Link 4 -->
+                <!-- Dropdown Link 6 -->
                 <li class="dropdown__item">
                   <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Daily Bank Reconciliations</p>
+                    <p class="dropdown__heading mb-8">Full Service Maintainance</p>
                     <p class="dropdown__p mb-24">
                       Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
                       Buildium.
@@ -104,10 +108,10 @@
                     <p class="dropdown__btn-text">Learn More</p>
                   </a>
                 </li>
-                <!-- Dropdown Link 4 -->
+                <!-- Dropdown Link 7 -->
                 <li class="dropdown__item">
                   <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Daily Bank Reconciliations</p>
+                    <p class="dropdown__heading mb-8">Brokerage Growth</p>
                     <p class="dropdown__p mb-24">
                       Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
                       Buildium.
@@ -118,15 +122,15 @@
               </ul>
             </li>
             <li class="header__link-item">
-              <a href="#" class="header__link">Reviews</a>
+              <a href="#!" class="header__link">Reviews</a>
             </li>
             <li class="header__link-item">
-              <a href="#" class="header__link">Resources</a>
+              <a href="#!" class="header__link">Resources</a>
               <ul class="dropdown">
                 <!-- Dropdown Link 1 -->
                 <li class="dropdown__item">
                   <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">On-demand Consulting</p>
+                    <p class="dropdown__heading mb-8">1099 Ebook</p>
                     <p class="dropdown__p mb-24">
                       Consulting all software related questions in less than an hour. No long term contracts and easy to
                       get started.
@@ -137,30 +141,9 @@
                 <!-- Dropdown Link 2 -->
                 <li class="dropdown__item">
                   <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Bookkeeping Services</p>
+                    <p class="dropdown__heading mb-8">APM Help's Blog</p>
                     <p class="dropdown__p mb-24">
                       For less than the cost of a full-time bookkeeper, you can have a whole team of experts.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 3 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Corporate Bookkeeping</p>
-                    <p class="dropdown__p mb-24">
-                      With our experts from AMP Help, you can focus less on accounting and more on growth!
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 4 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Daily Bank Reconciliations</p>
-                    <p class="dropdown__p mb-24">
-                      Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
-                      Buildium.
                     </p>
                     <p class="dropdown__btn-text">Learn More</p>
                   </a>
@@ -168,19 +151,21 @@
               </ul>
             </li>
             <li class="header__link-item">
-              <a href="#" class="header__link">Career</a>
+              <a href="#!" class="header__link">Career</a>
             </li>
             <li class="header__link-item">
-              <a href="#" class="header__link">Contact</a>
+              <a href="#!" class="header__link">Contact</a>
             </li>
           </ul>
 
           <ul class="header__links header__links--contact flex flex-jc-sb flex-ai-c">
             <li class="header__link-item">
-              <a href="tel:+959962323716" class="header__link">+95 996 232 3716</a>
+              <a href="tel:+959962323716" class="header__link header__link--contact">+95 996 232 3716</a>
             </li>
             <li class="header__link-item">
-              <a href="mailto:yaunghein@protonmail.com" class="header__link">yaunghein@protonmail.com</a>
+              <a href="mailto:yaunghein@protonmail.com" class="header__link header__link--contact"
+                >yaunghein@protonmail.com</a
+              >
             </li>
           </ul>
         </nav>
@@ -202,7 +187,10 @@
           </p>
           <div class="buttons-wrapper">
             <a href="#contact" class="button hero-btn">Get in tough with us</a>
-            <a target="blank" href="https://github.com/yaunghein/scss-practice-apm-help" class="button button--ghost"
+            <a
+              target="blank"
+              href="https://github.com/yaunghein/scss-practice-apm-help"
+              class="button button--ghost hero-btn"
               >View Source Code</a
             >
           </div>
@@ -274,7 +262,7 @@
                   AppFolio, Buildium, and Propertyware Experts who are here to clean up your books and keep them clean -
                   quickly and accurately.
                 </p>
-                <a href="#" class="button">Learn More</a>
+                <a href="#!" class="button">Learn More</a>
               </div>
             </div>
             <div class="column-two">
@@ -293,7 +281,7 @@
                   AppFolio, Buildium, and Propertyware Experts who are here to clean up your books and keep them clean -
                   quickly and accurately.﻿
                 </p>
-                <a href="#" class="button">Learn More</a>
+                <a href="#!" class="button">Learn More</a>
               </div>
             </div>
             <div class="column-two">
@@ -312,7 +300,7 @@
                   AppFolio, Buildium, and Propertyware Experts who are here to clean up your books and keep them clean -
                   quickly and accurately.﻿
                 </p>
-                <a href="#" class="button">Learn More</a>
+                <a href="#!" class="button">Learn More</a>
               </div>
             </div>
             <div class="column-two">
@@ -331,7 +319,7 @@
                   AppFolio, Buildium, and Propertyware Experts who are here to clean up your books and keep them clean -
                   quickly and accurately.﻿
                 </p>
-                <a href="#" class="button">Learn More</a>
+                <a href="#!" class="button">Learn More</a>
               </div>
             </div>
             <div class="column-two">
@@ -341,7 +329,7 @@
             </div>
           </div>
         </div>
-        <a href="#" class="button button--ghost" data-aos="fade-up">See all services</a>
+        <a href="#!" class="button button--ghost" data-aos="fade-up">See all services</a>
       </div>
     </section>
 
@@ -353,7 +341,7 @@
           <p class="mb-32 long" data-aos="fade-up">
             Here’s what our clients are saying about APM Help’s rental property management.
           </p>
-          <a href="#" class="button button--ghost" data-aos="fade-up">See all reviews</a>
+          <a href="#!" class="button button--ghost" data-aos="fade-up">See all reviews</a>
         </div>
         <!-- Swiper Slider -->
         <div class="swiper-container" data-aos="fade-up">
@@ -429,7 +417,7 @@
               Ready to work with the experts in rental property management?
             </h2>
             <p class="cta__p mb-32" data-aos="fade-up">We typically respond in <b>under 10 minutes!</b></p>
-            <a href="#" class="button m0" data-aos="fade-up">get started now</a>
+            <a href="#!" class="button m0" data-aos="fade-up">get started now</a>
           </div>
           <img src="/images/cta-placeholder-image.png" alt="" class="cta__image" />
         </div>
@@ -444,7 +432,7 @@
           <p class="mb-32 long" data-aos="fade-up">
             Everything yoou need to know about rental property management and related softwares.
           </p>
-          <a href="#" class="button button--ghost" data-aos="fade-up">See all articles</a>
+          <a href="#!" class="button button--ghost" data-aos="fade-up">See all articles</a>
         </div>
         <div class="home-blog__cards">
           <!-- First -->
@@ -459,7 +447,7 @@
                 accounting through the clients online property management software, which allows our clients to focus on
                 growing their business.
               </p>
-              <a href="" class="button home-blog__button m0">Read more</a>
+              <a href="#!" class="button home-blog__button m0">Read more</a>
             </div>
           </div>
           <!-- Second -->
@@ -473,7 +461,7 @@
                 you are most likely worried about the accuracy of your 1099-MISCs and NECs. There are a lot of things
                 that need to be reviewed before you finalize your 1099s, one of those things being prepaid rent.…
               </p>
-              <a href="" class="button home-blog__button m0">Read more</a>
+              <a href="#!" class="button home-blog__button m0">Read more</a>
             </div>
           </div>
           <!-- Third -->
@@ -486,7 +474,7 @@
                 If your trust accounts were audited today, would your books pass? The answer may surprise you. Check out
                 today’s blog to determine how well your company would do.
               </p>
-              <a href="" class="button home-blog__button m0">Read more</a>
+              <a href="#!" class="button home-blog__button m0">Read more</a>
             </div>
           </div>
         </div>
@@ -574,7 +562,7 @@
                 <label for="message" class="contact__form-label mb-8">Your message*</label>
                 <input type="text" class="contact__form-input" id="message" />
               </div>
-              <a href="#!" type="submit" class="button contact__button">Send Message</a>
+              <button type="submit" class="button contact__button">Send Message</button>
             </form>
           </div>
         </div>
@@ -615,7 +603,10 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <p class="footer__copy-right">© APM Help & Bookkeeping 2011-2021. All Right Reserved.</p>
+          <p class="footer__copy-right">
+            Designed & Developed by
+            <a target="blank" href="https://www.linkedin.com/in/yanaunghein"><u>Yaung Hein</u> 💙</a>
+          </p>
           <div class="footer__social-links">
             <p class="find-us-on">Find us on:</p>
             <div class="footer__social-links-wrapper">

@@ -381,6 +381,54 @@ p {
   }
 }
 
+.alert {
+  background: #ffb647;
+  padding: 1rem 2rem;
+  color: white;
+  border: 2px solid #ffaf38;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 2px 3px 51px 7px rgba(255, 182, 71, 0.4);
+          box-shadow: 2px 3px 51px 7px rgba(255, 182, 71, 0.4);
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  width: 60%;
+}
+
+@media (max-width: 63.9375em) {
+  .alert {
+    bottom: unset;
+    top: 0;
+    padding: 1.2rem 0.8rem;
+  }
+}
+
+.alert > a {
+  text-decoration: underline;
+}
+
+.alert.open {
+  visibility: visible;
+  opacity: 1;
+  bottom: 1rem;
+}
+
+@media (max-width: 63.9375em) {
+  .alert.open {
+    bottom: unset;
+    top: 1rem;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -396,8 +444,7 @@ p {
     top: unset;
     bottom: 0;
     height: 4rem;
-    -webkit-transform: translateY(160%);
-            transform: translateY(160%);
+    opacity: 0;
     -webkit-animation: animate-header 0.4s ease-in-out forwards;
             animation: animate-header 0.4s ease-in-out forwards;
     -webkit-animation-delay: 1.2s;
@@ -405,22 +452,18 @@ p {
   }
   @-webkit-keyframes animate-header {
     0% {
-      -webkit-transform: translateY(160%);
-              transform: translateY(160%);
+      opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0%);
-              transform: translateY(0%);
+      opacity: 1;
     }
   }
   @keyframes animate-header {
     0% {
-      -webkit-transform: translateY(160%);
-              transform: translateY(160%);
+      opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0%);
-              transform: translateY(0%);
+      opacity: 1;
     }
   }
 }
@@ -447,8 +490,8 @@ p {
     padding: 0.8rem 0;
     -webkit-animation: none;
             animation: none;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: unset;
+            transform: unset;
   }
 }
 
@@ -593,7 +636,6 @@ p {
 
 .header__link-item {
   margin: 0 1.2rem;
-  padding: 1.5rem 0;
 }
 
 @media (max-width: 63.9375em) {
@@ -611,6 +653,8 @@ p {
   font-size: 0.875rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  display: inline-block;
+  padding: 1.5rem 0;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1447,5 +1491,10 @@ p {
 
 .footer__social-link {
   margin: 0 0.125rem;
+  width: 1.2em;
+}
+
+.footer__social-link:last-child {
+  margin-bottom: -0.05em;
 }
 /*# sourceMappingURL=styles.css.map */

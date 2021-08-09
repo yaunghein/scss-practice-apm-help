@@ -314,3 +314,43 @@ p {
     margin-bottom: 4rem;
   }
 }
+
+.alert {
+  background: $clr-accent;
+  padding: 1rem 2rem;
+  color: $clr-light;
+  border: 2px solid darken($clr-accent, 3%);
+  border-radius: 0.4rem;
+  box-shadow: 2px 3px 51px 7px rgba(255, 182, 71, 0.4);
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  width: 60%;
+  @include breakpoints-down(medium) {
+    bottom: unset;
+    top: 0;
+    padding: 1.2rem 0.8rem;
+  }
+
+  & > a {
+    text-decoration: underline;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    bottom: 1rem;
+
+    @include breakpoints-down(medium) {
+      bottom: unset;
+      top: 1rem;
+    }
+  }
+}
