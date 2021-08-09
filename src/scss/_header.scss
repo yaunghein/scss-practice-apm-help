@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   background: $clr-light;
-
   z-index: 311;
 
   @include breakpoints-down(medium) {
@@ -12,6 +11,18 @@
     top: unset;
     bottom: 0;
     height: 4rem;
+    transform: translateY(160%);
+    animation: animate-header 0.4s ease-in-out forwards;
+    animation-delay: 1.5s;
+
+    @keyframes animate-header {
+      0% {
+        transform: translateY(160%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
   }
 
   .header-container {
@@ -23,13 +34,27 @@
   nav {
     height: 100%;
     border-bottom: 0.07em solid lighten($clr-brand-dark, 72%);
+    transform: translateY(-100%);
+    animation: animate-nav 0.8s ease-in-out forwards;
+    animation-delay: 0.8s;
 
     @include breakpoints-down(medium) {
       padding: 0.8rem 0;
+      animation: none;
+      transform: translateY(0);
     }
 
     @include breakpoints-down(small) {
       padding: 0;
+    }
+
+    @keyframes animate-nav {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
     }
   }
 
