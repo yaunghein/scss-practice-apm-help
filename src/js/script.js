@@ -10,8 +10,9 @@ menuBtn.addEventListener('click', () => {
 //Changing contact info based on screen size
 const contactLinks = document.querySelectorAll('.header__links--contact > .header__link-item > .header__link');
 if (window.innerWidth < 640) {
-  contactLinks[1].textContent = 'Speak With Us';
+  contactLinks[1].textContent = 'Contact Us';
   contactLinks[1].setAttribute('href', '#contact');
+  contactLinks[0].textContent = 'Call APM Help';
 }
 
 //Review Slider

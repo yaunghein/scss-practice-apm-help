@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background: $clr-light;
+
   z-index: 311;
 
   @include breakpoints-down(medium) {
@@ -12,11 +13,23 @@
     bottom: 0;
     height: 4rem;
   }
+
+  .header-container {
+    @include breakpoints-down(medium) {
+      padding: 0;
+    }
+  }
+
   nav {
     height: 100%;
+    border-bottom: 0.07em solid lighten($clr-brand-dark, 72%);
 
     @include breakpoints-down(medium) {
       padding: 0.8rem 0;
+    }
+
+    @include breakpoints-down(small) {
+      padding: 0;
     }
   }
 
@@ -133,13 +146,25 @@
       width: 100%;
       padding: 0;
       color: $clr-light;
+      height: 100%;
     }
     .header__link-item {
       @include breakpoints-down(medium) {
         margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 0.07em solid rgba($clr-light, 0.5);
 
         &:first-child {
           order: 2;
+          border-right: none;
+        }
+
+        &:hover .header__link {
+          color: $clr-brand-dark;
         }
       }
     }
@@ -165,7 +190,7 @@
 
   .dropdown {
     position: fixed;
-    top: 4.15em;
+    top: 4.22em;
     left: 0;
     opacity: 0;
     visibility: hidden;
