@@ -1206,7 +1206,7 @@ p {
 
 @media (max-width: 39.9375em) {
   .contact__form {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -1265,6 +1265,7 @@ p {
   font-size: 0.875rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  text-align: left;
 }
 
 .contact__form-input {
@@ -1277,12 +1278,6 @@ p {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-
-@media (max-width: 39.9375em) {
-  .contact__button {
-    margin: 0 auto;
-  }
 }
 
 .footer {

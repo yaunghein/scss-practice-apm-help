@@ -19,7 +19,7 @@
 
   &__form {
     @include breakpoints-down(small) {
-      text-align: left;
+      text-align: center;
     }
   }
 
@@ -67,6 +67,7 @@
     font-size: $fs-small;
     font-family: $ff-body;
     font-weight: 600;
+    text-align: left;
   }
 
   &__form-input {
@@ -81,7 +82,6 @@
 
   &__button {
     @include breakpoints-down(small) {
-      margin: 0 auto;
     }
   }
 }
