@@ -34,9 +34,6 @@
   nav {
     height: 100%;
     border-bottom: 0.07em solid lighten($clr-brand-dark, 72%);
-    transform: translateY(-100%);
-    animation: animate-nav 0.8s ease-in-out forwards;
-    animation-delay: 0.8s;
 
     @include breakpoints-down(medium) {
       padding: 0.8rem 0;
@@ -46,15 +43,6 @@
 
     @include breakpoints-down(small) {
       padding: 0;
-    }
-
-    @keyframes animate-nav {
-      0% {
-        transform: translateY(-100%);
-      }
-      100% {
-        transform: translateY(0%);
-      }
     }
   }
 
@@ -163,7 +151,7 @@
     font-family: $ff-heading;
     font-weight: 600;
     display: inline-block;
-    padding: 1.5rem 0;
+    padding: 1.7rem 0;
     position: relative;
     @include transition-ease-in-out;
   }
@@ -219,6 +207,7 @@
     position: fixed;
     top: 4.22em;
     left: 0;
+    right: 0;
     opacity: 0;
     visibility: hidden;
     display: flex;
