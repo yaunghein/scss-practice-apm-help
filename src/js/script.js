@@ -15,6 +15,17 @@ if (window.innerWidth < 640) {
   contactLinks[0].textContent = 'Call APM Help';
 }
 
+//Remove hashtag in url
+const linkTags = Array.from(document.getElementsByTagName('a'));
+console.log(linkTags);
+linkTags.forEach(link => {
+  link.addEventListener('click', () => {
+    setTimeout(() => {
+      history.replaceState(null, null, ' ');
+    }, 10);
+  });
+});
+
 //Review Slider
 const swiper = new Swiper('.swiper-container', {
   speed: 400,
