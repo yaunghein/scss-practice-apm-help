@@ -41,6 +41,19 @@
       color: rgba($clr-light, 0.8);
     }
   }
+
+  .button {
+    @include breakpoints-down(small) {
+      background-color: $clr-accent;
+      color: $clr-light;
+      border-color: $clr-accent;
+
+      &:hover {
+        background-color: darken($clr-accent, 5%);
+      }
+    }
+  }
+
   &__image {
     position: absolute;
     top: -7rem;

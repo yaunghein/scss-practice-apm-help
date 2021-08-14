@@ -52,6 +52,10 @@ a {
   &--bg-accent {
     background: $clr-accent-bg;
   }
+
+  @include breakpoints-down(small) {
+    padding: 2.5rem 0;
+  }
 }
 
 .container {
@@ -59,54 +63,10 @@ a {
   height: 100%;
   margin: 0 auto;
   padding: 0 5rem;
+  overflow: hidden;
 
   @include breakpoints-down(medium) {
     padding: 0 1.5rem;
-  }
-}
-
-.split-column-wrapper {
-  max-width: 66.5rem;
-  margin: 0 auto;
-
-  .split-column {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @include breakpoints-down(small) {
-      flex-direction: column;
-      margin-bottom: 5rem;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &--reverse {
-      flex-direction: row-reverse;
-
-      @include breakpoints-down(small) {
-        flex-direction: column;
-      }
-    }
-
-    .column-one {
-      width: 40%;
-
-      @include breakpoints-down(small) {
-        width: 100%;
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    .column-two {
-      width: 50%;
-
-      @include breakpoints-down(small) {
-        width: 80%;
-      }
-    }
   }
 }
 
@@ -158,6 +118,10 @@ a {
   &:hover {
     background: $clr-brand-dark;
     border-color: $clr-brand-dark;
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 
   &--ghost {

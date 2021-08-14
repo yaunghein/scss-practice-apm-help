@@ -78,6 +78,10 @@
     padding: 0 1.5rem;
     font-size: $fs-small;
     appearance: none;
+
+    &:focus {
+      border-color: $clr-brand;
+    }
   }
 
   &__button {

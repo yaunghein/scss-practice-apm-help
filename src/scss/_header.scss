@@ -217,6 +217,10 @@
     background: lighten($clr-off-white, 1%);
     @include transition-ease-in-out;
 
+    @media screen and (max-width: 1400px) {
+      top: 4.3em;
+    }
+
     @include breakpoints-down(small) {
       position: static;
       height: 0;
