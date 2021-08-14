@@ -5,6 +5,7 @@
   width: 100%;
   background: $clr-light;
   z-index: 311;
+  height: 5rem;
 
   @include breakpoints-down(medium) {
     background: $clr-accent;
@@ -28,11 +29,13 @@
   .header-container {
     @include breakpoints-down(medium) {
       padding: 0;
+      overflow: unset;
     }
   }
 
   nav {
     height: 100%;
+    position: relative;
     border-bottom: 0.07em solid lighten($clr-brand-dark, 72%);
 
     @include breakpoints-down(medium) {
@@ -198,14 +201,14 @@
 .header__link-item {
   position: relative;
   width: 100%;
-  z-index: 900;
+  z-index: 0;
   @include breakpoints-down(medium) {
     padding: 0 1.5em;
   }
 
   .dropdown {
     position: fixed;
-    top: 4.22em;
+    top: 4.45em;
     left: 0;
     right: 0;
     opacity: 0;
@@ -213,13 +216,13 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 5rem;
-    z-index: 1000;
     background: lighten($clr-off-white, 1%);
     @include transition-ease-in-out;
+    display: none;
 
-    @media screen and (max-width: 1400px) {
-      top: 4.3em;
-    }
+    // @media screen and (max-width: 1400px) {
+    //   top: 4.28em;
+    // }
 
     @include breakpoints-down(small) {
       position: static;

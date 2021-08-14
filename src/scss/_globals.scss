@@ -44,6 +44,9 @@ a {
 
 .section {
   padding: 5rem 0;
+  position: relative;
+  z-index: 2;
+  background: $clr-light;
 
   &--bg-pale-blue {
     background: $clr-brand-bg;

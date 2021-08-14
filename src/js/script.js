@@ -65,7 +65,8 @@ linkTagsToAddAlertClass.forEach(link => {
   if (
     !link.classList.contains('hero-btn') &&
     !link.classList.contains('header__menu') &&
-    !link.classList.contains('header__link--contact')
+    !link.classList.contains('header__link--contact') &&
+    !link.classList.contains('prevent-alert')
   ) {
     link.classList.add('alert-link');
   }

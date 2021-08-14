@@ -9,7 +9,7 @@
     z-index: 1;
 
     @include breakpoints-down(medium) {
-      background: $clr-brand-dark;
+      background: $clr-brand;
       box-shadow: 0px 6px 39px 9px rgba(18, 52, 99, 0.12);
     }
 

@@ -1,5 +1,29 @@
+.footer-filler {
+  pointer-events: none;
+  width: 100%;
+  height: 26.5em;
+
+  @include breakpoints-down(small) {
+    height: 48em;
+  }
+}
+
 .footer {
   padding: 5rem 0 0;
+  background: $clr-brand;
+  color: $clr-light;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @include breakpoints-down(medium) {
+    // position: relative;
+  }
+
+  @include breakpoints-down(small) {
+    padding: 2.5rem 0 0;
+  }
 
   &__top {
     display: flex;
@@ -45,6 +69,7 @@
       @include breakpoints-down(small) {
         flex: unset;
         width: 100%;
+        margin-bottom: 0;
       }
     }
     &:nth-child(4) {
@@ -53,9 +78,13 @@
       @include breakpoints-down(small) {
         flex: unset;
         width: 100%;
-        margin-bottom: 0;
+        display: none;
       }
     }
+  }
+
+  h3 {
+    color: $clr-light;
   }
 
   &__link {
@@ -63,7 +92,7 @@
     font-family: $ff-body;
     font-weight: 600;
     margin: 0.25rem 0;
-    color: $clr-brand-dark;
+    color: $clr-light;
     position: relative;
     @include transition-ease-in-out;
 
@@ -107,11 +136,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 0.0625rem solid #e6e8ea;
+    border-top: 0.0625rem solid #e6e8ea28;
+
+    @include breakpoints-down(medium) {
+      padding-bottom: 7rem;
+    }
 
     @include breakpoints-down(small) {
       flex-direction: column;
-      padding-bottom: 7rem;
     }
   }
 

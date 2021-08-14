@@ -50,6 +50,9 @@ a {
 
 .section {
   padding: 5rem 0;
+  position: relative;
+  z-index: 2;
+  background: white;
 }
 
 .section--bg-pale-blue {
@@ -380,6 +383,7 @@ p {
   width: 100%;
   background: white;
   z-index: 311;
+  height: 5rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -415,11 +419,13 @@ p {
 @media (max-width: 63.9375em) {
   .header .header-container {
     padding: 0;
+    overflow: unset;
   }
 }
 
 .header nav {
   height: 100%;
+  position: relative;
   border-bottom: 0.07em solid #e9f1fb;
 }
 
@@ -621,7 +627,7 @@ p {
 .header__link-item {
   position: relative;
   width: 100%;
-  z-index: 900;
+  z-index: 0;
 }
 
 @media (max-width: 63.9375em) {
@@ -632,7 +638,7 @@ p {
 
 .header__link-item .dropdown {
   position: fixed;
-  top: 4.22em;
+  top: 4.45em;
   left: 0;
   right: 0;
   opacity: 0;
@@ -643,16 +649,10 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 5rem;
-  z-index: 1000;
   background: #fafafa;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-
-@media screen and (max-width: 1400px) {
-  .header__link-item .dropdown {
-    top: 4.3em;
-  }
+  display: none;
 }
 
 @media (max-width: 39.9375em) {
@@ -796,6 +796,8 @@ p {
 }
 
 .hero__image-wrapper {
+  width: 100%;
+  height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -814,6 +816,8 @@ p {
 }
 
 .hero__image-wrapper > img {
+  width: 100%;
+  height: 100%;
   -webkit-transform: translateY(0.8em);
           transform: translateY(0.8em);
 }
@@ -974,11 +978,20 @@ p {
   width: 100%;
   height: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.split-column-wrapper .split-column .column-two__bg-image {
+  width: 90%;
+  margin: 0 auto;
 }
 
 @media (max-width: 39.9375em) {
   .split-column-wrapper .split-column .column-two__bg-image {
     position: relative;
+    width: 100%;
     -webkit-transform: translateX(-70%);
             transform: translateX(-70%);
   }
@@ -993,9 +1006,11 @@ p {
           transform: translate(-50%, -50%);
 }
 
-.split-column-wrapper .split-column--reverse .column-two__bg-image {
-  -webkit-transform: translateX(70%);
-          transform: translateX(70%);
+@media (max-width: 39.9375em) {
+  .split-column-wrapper .split-column--reverse .column-two__bg-image {
+    -webkit-transform: translateX(70%);
+            transform: translateX(70%);
+  }
 }
 
 .swiper-container {
@@ -1072,7 +1087,7 @@ p {
 
 @media (max-width: 63.9375em) {
   .cta .cta-wrapper {
-    background: #123463;
+    background: #4b7cb4;
     -webkit-box-shadow: 0px 6px 39px 9px rgba(18, 52, 99, 0.12);
             box-shadow: 0px 6px 39px 9px rgba(18, 52, 99, 0.12);
   }
@@ -1309,8 +1324,32 @@ p {
   border-color: #4b7cb4;
 }
 
+.footer-filler {
+  pointer-events: none;
+  width: 100%;
+  height: 26.5em;
+}
+
+@media (max-width: 39.9375em) {
+  .footer-filler {
+    height: 48em;
+  }
+}
+
 .footer {
   padding: 5rem 0 0;
+  background: #4b7cb4;
+  color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .footer {
+    padding: 2.5rem 0 0;
+  }
 }
 
 .footer__top {
@@ -1392,6 +1431,7 @@ p {
         -ms-flex: unset;
             flex: unset;
     width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -1407,8 +1447,12 @@ p {
         -ms-flex: unset;
             flex: unset;
     width: 100%;
-    margin-bottom: 0;
+    display: none;
   }
+}
+
+.footer h3 {
+  color: white;
 }
 
 .footer__link {
@@ -1416,7 +1460,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   margin: 0.25rem 0;
-  color: #123463;
+  color: white;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1472,7 +1516,13 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 0.0625rem solid #e6e8ea;
+  border-top: 0.0625rem solid #e6e8ea28;
+}
+
+@media (max-width: 63.9375em) {
+  .footer__bottom {
+    padding-bottom: 7rem;
+  }
 }
 
 @media (max-width: 39.9375em) {
@@ -1481,7 +1531,6 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 7rem;
   }
 }
 
