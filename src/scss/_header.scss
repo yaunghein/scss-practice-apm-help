@@ -218,7 +218,6 @@
     padding: 0 5rem;
     background: lighten($clr-off-white, 1%);
     @include transition-ease-in-out;
-    display: none;
 
     // @media screen and (max-width: 1400px) {
     //   top: 4.28em;
