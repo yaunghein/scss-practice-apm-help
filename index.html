@@ -1,668 +1,1107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/favicon-large.svg" type="image/x-icon" />
-    <meta property="og:title" content="APM Help & Bookkeeping | SCSS Practice by Yaung Hein" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="images/og-image.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/components/effect-fade/effect-fade.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./src/css/styles.css" />
-    <title>SCSS Practice by Yaung Hein | APM Help & Bookkeeping</title>
-    <style>
-      p {
-        line-height: 1.6;
-      }
-    </style>
-  </head>
-  <body>
-    <span class="alert"
-      >Because this is a practise project, links will go no where 😂. You can see source code
-      <a target="blank" href="https://github.com/yaunghein/scss-practice-apm-help">here</a>.</span
-    >
-    <!-- ########## Header ########## -->
-    <header class="header">
-      <div class="container header-container">
-        <nav class="flex flex-jc-sb flex-ai-c">
-          <a href="#!" class="header__logo hide-for-mobile">
-            <img src="./images/logo.png" alt="APM Help" />
-          </a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="images/favicon-large.svg"
+			type="image/x-icon"
+		/>
+		<meta
+			property="og:title"
+			content="APM Help & Bookkeeping | SCSS Practice by Yaung Hein"
+		/>
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="images/og-image.jpg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/components/effect-fade/effect-fade.min.css"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="./src/css/styles.css" />
+		<title>SCSS Practice by Yaung Hein | APM Help & Bookkeeping</title>
+		<style>
+			p {
+				line-height: 1.6;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="alert"
+			>Because this is a practise project, links will go no where 😂. You
+			can see source code
+			<a
+				target="blank"
+				href="https://github.com/yaunghein/scss-practice-apm-help"
+				>here</a
+			>.</span
+		>
+		<!-- ########## Header ########## -->
+		<header class="header">
+			<div class="container header-container">
+				<nav class="flex flex-jc-sb flex-ai-c">
+					<a href="#!" class="header__logo hide-for-mobile">
+						<img src="./images/logo.png" alt="APM Help" />
+					</a>
 
-          <a href="#!" class="header__menu hide-for-desktop" id="menu-btn">
-            <div class="hanbuger">
-              <span id="menu-text">MENU</span>
-            </div>
-          </a>
+					<a
+						href="#!"
+						class="header__menu hide-for-desktop"
+						id="menu-btn"
+					>
+						<div class="hanbuger">
+							<span id="menu-text">MENU</span>
+						</div>
+					</a>
 
-          <ul class="header__links flex flex-ai-c hide-for-mobile" id="nav-links">
-            <li class="header__link-item">
-              <a href="#!" class="header__link">Services</a>
-              <ul class="dropdown">
-                <!-- Dropdown Link 1 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">On-demand Consulting</p>
-                    <p class="dropdown__p mb-24">
-                      Consulting all software related questions in less than an hour. No long term contracts and easy to
-                      get started.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 2 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Bookkeeping Services</p>
-                    <p class="dropdown__p mb-24">
-                      For less than the cost of a full-time bookkeeper, you can have a whole team of experts.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 3 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Corporate Bookkeeping</p>
-                    <p class="dropdown__p mb-24">
-                      With our experts from AMP Help, you can focus less on accounting and more on growth!
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 4 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Daily Bank Reconciliations</p>
-                    <p class="dropdown__p mb-24">
-                      Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
-                      Buildium.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 5 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">daily Audits</p>
-                    <p class="dropdown__p mb-24">
-                      Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
-                      Buildium.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 6 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Full Service Maintainance</p>
-                    <p class="dropdown__p mb-24">
-                      Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
-                      Buildium.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 7 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">Brokerage Growth</p>
-                    <p class="dropdown__p mb-24">
-                      Get your bank reconciliations done every single day! Available for AppFolio, Propertyware &
-                      Buildium.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__link-item">
-              <a href="#!" class="header__link">Reviews</a>
-            </li>
-            <li class="header__link-item">
-              <a href="#!" class="header__link">Resources</a>
-              <ul class="dropdown">
-                <!-- Dropdown Link 1 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">1099 Ebook</p>
-                    <p class="dropdown__p mb-24">
-                      Consulting all software related questions in less than an hour. No long term contracts and easy to
-                      get started.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-                <!-- Dropdown Link 2 -->
-                <li class="dropdown__item">
-                  <a href="#!" class="dropdown__link">
-                    <p class="dropdown__heading mb-8">APM Help's Blog</p>
-                    <p class="dropdown__p mb-24">
-                      For less than the cost of a full-time bookkeeper, you can have a whole team of experts.
-                    </p>
-                    <p class="dropdown__btn-text">Learn More</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__link-item">
-              <a href="#!" class="header__link">Career</a>
-            </li>
-            <li class="header__link-item">
-              <a href="#!" class="header__link">Contact</a>
-            </li>
-          </ul>
+					<ul
+						class="header__links flex flex-ai-c hide-for-mobile"
+						id="nav-links"
+					>
+						<li class="header__link-item">
+							<a href="#!" class="header__link">Services</a>
+							<ul class="dropdown">
+								<!-- Dropdown Link 1 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											On-demand Consulting
+										</p>
+										<p class="dropdown__p mb-24">
+											Consulting all software related
+											questions in less than an hour. No
+											long term contracts and easy to get
+											started.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+								<!-- Dropdown Link 2 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											Bookkeeping Services
+										</p>
+										<p class="dropdown__p mb-24">
+											For less than the cost of a
+											full-time bookkeeper, you can have a
+											whole team of experts.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+								<!-- Dropdown Link 3 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											Corporate Bookkeeping
+										</p>
+										<p class="dropdown__p mb-24">
+											With our experts from AMP Help, you
+											can focus less on accounting and
+											more on growth!
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+								<!-- Dropdown Link 4 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											Daily Bank Reconciliations
+										</p>
+										<p class="dropdown__p mb-24">
+											Get your bank reconciliations done
+											every single day! Available for
+											AppFolio, Propertyware & Buildium.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+								<!-- Dropdown Link 5 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											daily Audits
+										</p>
+										<p class="dropdown__p mb-24">
+											Get your bank reconciliations done
+											every single day! Available for
+											AppFolio, Propertyware & Buildium.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+								<!-- Dropdown Link 6 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											Full Service Maintainance
+										</p>
+										<p class="dropdown__p mb-24">
+											Get your bank reconciliations done
+											every single day! Available for
+											AppFolio, Propertyware & Buildium.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+								<!-- Dropdown Link 7 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											Brokerage Growth
+										</p>
+										<p class="dropdown__p mb-24">
+											Get your bank reconciliations done
+											every single day! Available for
+											AppFolio, Propertyware & Buildium.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="header__link-item">
+							<a href="#!" class="header__link">Reviews</a>
+						</li>
+						<li class="header__link-item">
+							<a href="#!" class="header__link">Resources</a>
+							<ul class="dropdown">
+								<!-- Dropdown Link 1 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											1099 Ebook
+										</p>
+										<p class="dropdown__p mb-24">
+											Consulting all software related
+											questions in less than an hour. No
+											long term contracts and easy to get
+											started.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+								<!-- Dropdown Link 2 -->
+								<li class="dropdown__item">
+									<a href="#!" class="dropdown__link">
+										<p class="dropdown__heading mb-8">
+											APM Help's Blog
+										</p>
+										<p class="dropdown__p mb-24">
+											For less than the cost of a
+											full-time bookkeeper, you can have a
+											whole team of experts.
+										</p>
+										<p class="dropdown__btn-text">
+											Learn More
+										</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="header__link-item">
+							<a href="#!" class="header__link">Career</a>
+						</li>
+						<li class="header__link-item">
+							<a href="#!" class="header__link">Contact</a>
+						</li>
+					</ul>
 
-          <ul class="header__links header__links--contact flex flex-jc-sb flex-ai-c">
-            <li class="header__link-item">
-              <a href="tel:+959962323716" class="header__link header__link--contact">+95 996 232 3716</a>
-            </li>
-            <li class="header__link-item">
-              <a href="mailto:yaunghein@protonmail.com" class="header__link header__link--contact"
-                >yaunghein@protonmail.com</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+					<ul
+						class="header__links header__links--contact flex flex-jc-sb flex-ai-c"
+					>
+						<li class="header__link-item">
+							<a
+								href="tel:+959962323716"
+								class="header__link header__link--contact"
+								>+95 996 232 3716</a
+							>
+						</li>
+						<li class="header__link-item">
+							<a
+								href="mailto:yaunghein@protonmail.com"
+								class="header__link header__link--contact"
+								>yaunghein@protonmail.com</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-    <!-- ########## Hero ########## -->
-    <section class="section hero">
-      <div class="container flex flex-ai-c">
-        <img src="./images/logo.png" alt="APM Help" class="hero__logo hide-for-desktop" />
-        <div class="hero__content-wrapper">
-          <h6 class="sub-title hero__sub-title mb-8">Your one stop agency for</h6>
-          <h1 class="hero__title mb-24 big">
-            Property management accounting <span class="pale-blue-text">experts</span>
-          </h1>
-          <p class="hero__p mb-32">
-            <!-- Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies
+		<!-- ########## Hero ########## -->
+		<section class="section hero">
+			<div class="container flex flex-ai-c">
+				<img
+					src="./images/logo.png"
+					alt="APM Help"
+					class="hero__logo hide-for-desktop"
+				/>
+				<div class="hero__content-wrapper">
+					<h6 class="sub-title hero__sub-title mb-8">
+						Your one stop agency for
+					</h6>
+					<h1 class="hero__title mb-24 big">
+						Property management accounting
+						<span class="pale-blue-text">experts</span>
+					</h1>
+					<p class="hero__p mb-32">
+						<!-- Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies
             - we're here to help. Let us show you what we can do for your business - the first 30 minutes are on us. -->
-            I used Figma to design this website, and this is my SCSS practice project.
-            <a
-              href="https://apmhelp.webflow.io/"
-              target="blank"
-              class="prevent-alert"
-              style="text-decoration: underline; font-weight: 600"
-              >You can see the actual website here</a
-            >, that is developed using Webflow. We will launch with actual domain soon.
-          </p>
-          <div class="buttons-wrapper">
-            <a href="#contact" class="button hero-btn">Get in tough with us</a>
-            <a
-              target="blank"
-              href="https://github.com/yaunghein/scss-practice-apm-help"
-              class="button button--ghost hero-btn"
-              >View Source Code</a
-            >
-          </div>
-        </div>
-        <div class="hero__image-wrapper">
-          <img
-            class="hero__image"
-            src="./images/property-management-expert.jpg"
-            alt="property management softwares expert"
-          />
-        </div>
-      </div>
-    </section>
+						I used Figma to design this website, and this is my SCSS
+						practice project.
+						<a
+							href="https://www.apmhelp.com/"
+							target="_blank"
+							class="prevent-alert"
+							style="text-decoration: underline; font-weight: 600"
+							>You can see the actual website here</a
+						>, that I developed for a client using Webflow with its
+						build-in CMS.
+					</p>
+					<div class="buttons-wrapper">
+						<a href="#contact" class="button hero-btn"
+							>Get in tough with us</a
+						>
+						<a
+							target="blank"
+							href="https://github.com/yaunghein/scss-practice-apm-help"
+							class="button button--ghost hero-btn"
+							>View Source Code</a
+						>
+					</div>
+				</div>
+				<div class="hero__image-wrapper">
+					<img
+						class="hero__image"
+						src="./images/property-management-expert.jpg"
+						alt="property management softwares expert"
+					/>
+				</div>
+			</div>
+		</section>
 
-    <!-- ########## Softwares You Already Used ########## -->
-    <section class="section section--bg-pale-blue sf-you-use">
-      <div class="container flex flex-d-column flex-ai-c">
-        <div class="heading-wrapper mb-64">
-          <h2 class="mb-24 long" data-aos="fade-up">We serve with the softwares you already used!</h2>
-          <p class="long" data-aos="fade-up">
-            Work with our expert consultants for bookkeeping support on AppFolio, Buildium, and Propertware to make sure
-            your books are always 100% clean.
-          </p>
-        </div>
-        <div class="sf-logos" data-aos="fade-up">
-          <img src="./images/appfolio logo.png" alt="Appfolio" class="sf-logo" data-aos="fade-up" data-aos-delay="50" />
-          <img
-            src="./images/buildium logo.png"
-            alt="Buildium"
-            class="sf-logo"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          />
-          <img src="./images/caliber logo.png" alt="Caliber" class="sf-logo" data-aos="fade-up" data-aos-delay="150" />
-          <img
-            src="./images/propertyware logo.png"
-            alt="Propertyware"
-            class="sf-logo"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          />
-          <img
-            src="./images/rent manager logo.png"
-            alt="Rent"
-            class="sf-logo"
-            data-aos="fade-up"
-            data-aos-delay="250"
-          />
-          <img
-            src="./images/quickbooks logo.png"
-            alt="Quickbook Online"
-            class="sf-logo"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          />
-        </div>
-      </div>
-    </section>
+		<!-- ########## Softwares You Already Used ########## -->
+		<section class="section section--bg-pale-blue sf-you-use">
+			<div class="container flex flex-d-column flex-ai-c">
+				<div class="heading-wrapper mb-64">
+					<h2 class="mb-24 long" data-aos="fade-up">
+						We serve with the softwares you already used!
+					</h2>
+					<p class="long" data-aos="fade-up">
+						Work with our expert consultants for bookkeeping support
+						on AppFolio, Buildium, and Propertware to make sure your
+						books are always 100% clean.
+					</p>
+				</div>
+				<div class="sf-logos" data-aos="fade-up">
+					<img
+						src="./images/appfolio logo.png"
+						alt="Appfolio"
+						class="sf-logo"
+						data-aos="fade-up"
+						data-aos-delay="50"
+					/>
+					<img
+						src="./images/buildium logo.png"
+						alt="Buildium"
+						class="sf-logo"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					/>
+					<img
+						src="./images/caliber logo.png"
+						alt="Caliber"
+						class="sf-logo"
+						data-aos="fade-up"
+						data-aos-delay="150"
+					/>
+					<img
+						src="./images/propertyware logo.png"
+						alt="Propertyware"
+						class="sf-logo"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					/>
+					<img
+						src="./images/rent manager logo.png"
+						alt="Rent"
+						class="sf-logo"
+						data-aos="fade-up"
+						data-aos-delay="250"
+					/>
+					<img
+						src="./images/quickbooks logo.png"
+						alt="Quickbook Online"
+						class="sf-logo"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					/>
+				</div>
+			</div>
+		</section>
 
-    <!-- ########## Why Choose ########## -->
-    <section class="section why-choose">
-      <div class="container flex flex-d-column flex-ai-c">
-        <div class="heading-wrapper mb-64">
-          <h2 class="mb-24 long" data-aos="fade-up">Why property managers choose APM Help</h2>
-        </div>
-        <div class="split-column-wrapper">
-          <!-- First -->
-          <div class="split-column mb-80">
-            <div class="column-one">
-              <div class="why-choose__content-wrapper">
-                <h3 class="mb-16" data-aos="fade">Your On-Demand Software Experts</h3>
-                <p class="mb-24" data-aos="fade">
-                  AppFolio, Buildium, and Propertyware Experts who are here to clean up your books and keep them clean -
-                  quickly and accurately.
-                </p>
-                <a href="#!" class="button" data-aos="fade">Learn More</a>
-              </div>
-            </div>
-            <div class="column-two">
-              <div class="column-two__image-wrapper" data-aos="fade-up">
-                <img src="./images/bg shapes.svg" alt="" class="column-two__bg-image" />
-                <img src="./images/Propertyware Illu.svg" alt="" class="column-two__image" />
-              </div>
-            </div>
-          </div>
+		<!-- ########## Why Choose ########## -->
+		<section class="section why-choose">
+			<div class="container flex flex-d-column flex-ai-c">
+				<div class="heading-wrapper mb-64">
+					<h2 class="mb-24 long" data-aos="fade-up">
+						Why property managers choose APM Help
+					</h2>
+				</div>
+				<div class="split-column-wrapper">
+					<!-- First -->
+					<div class="split-column mb-80">
+						<div class="column-one">
+							<div class="why-choose__content-wrapper">
+								<h3 class="mb-16" data-aos="fade">
+									Your On-Demand Software Experts
+								</h3>
+								<p class="mb-24" data-aos="fade">
+									AppFolio, Buildium, and Propertyware Experts
+									who are here to clean up your books and keep
+									them clean - quickly and accurately.
+								</p>
+								<a href="#!" class="button" data-aos="fade"
+									>Learn More</a
+								>
+							</div>
+						</div>
+						<div class="column-two">
+							<div
+								class="column-two__image-wrapper"
+								data-aos="fade-up"
+							>
+								<img
+									src="./images/bg shapes.svg"
+									alt=""
+									class="column-two__bg-image"
+								/>
+								<img
+									src="./images/Propertyware Illu.svg"
+									alt=""
+									class="column-two__image"
+								/>
+							</div>
+						</div>
+					</div>
 
-          <!-- Second -->
-          <div class="split-column split-column--reverse mb-80">
-            <div class="column-one">
-              <div class="why-choose__content-wrapper">
-                <h3 class="mb-16" data-aos="fade">Scalable bookkeeping for your growing business</h3>
-                <p class="mb-24" data-aos="fade">
-                  U.S. Based Account Managers with Property Management Industry experience who are dedicated to your
-                  books, giving you time back to grow your business.
-                </p>
-                <a href="#!" class="button" data-aos="fade">Learn More</a>
-              </div>
-            </div>
-            <div class="column-two">
-              <div class="column-two__image-wrapper" data-aos="fade-up">
-                <img src="./images/bg shapes.svg" alt="" class="column-two__bg-image" />
-                <img src="./images/Buildium Illu.svg" alt="" class="column-two__image" />
-              </div>
-            </div>
-          </div>
+					<!-- Second -->
+					<div class="split-column split-column--reverse mb-80">
+						<div class="column-one">
+							<div class="why-choose__content-wrapper">
+								<h3 class="mb-16" data-aos="fade">
+									Scalable bookkeeping for your growing
+									business
+								</h3>
+								<p class="mb-24" data-aos="fade">
+									U.S. Based Account Managers with Property
+									Management Industry experience who are
+									dedicated to your books, giving you time
+									back to grow your business.
+								</p>
+								<a href="#!" class="button" data-aos="fade"
+									>Learn More</a
+								>
+							</div>
+						</div>
+						<div class="column-two">
+							<div
+								class="column-two__image-wrapper"
+								data-aos="fade-up"
+							>
+								<img
+									src="./images/bg shapes.svg"
+									alt=""
+									class="column-two__bg-image"
+								/>
+								<img
+									src="./images/Buildium Illu.svg"
+									alt=""
+									class="column-two__image"
+								/>
+							</div>
+						</div>
+					</div>
 
-          <!-- Third -->
-          <div class="split-column mb-80">
-            <div class="column-one">
-              <div class="why-choose__content-wrapper">
-                <h3 class="mb-16" data-aos="fade">Going through an audit?</h3>
-                <p class="mb-24" data-aos="fade">
-                  We provide Daily Audits and Audit Preparation and are here to work with you to ensure your books are
-                  audit ready and stay audit-ready.
-                </p>
-                <a href="#!" class="button" data-aos="fade">Learn More</a>
-              </div>
-            </div>
-            <div class="column-two">
-              <div class="column-two__image-wrapper" data-aos="fade-up">
-                <img src="./images/bg shapes.svg" alt="" class="column-two__bg-image" />
-                <img src="./images/Appfolio Illu.svg" alt="" class="column-two__image" />
-              </div>
-            </div>
-          </div>
+					<!-- Third -->
+					<div class="split-column mb-80">
+						<div class="column-one">
+							<div class="why-choose__content-wrapper">
+								<h3 class="mb-16" data-aos="fade">
+									Going through an audit?
+								</h3>
+								<p class="mb-24" data-aos="fade">
+									We provide Daily Audits and Audit
+									Preparation and are here to work with you to
+									ensure your books are audit ready and stay
+									audit-ready.
+								</p>
+								<a href="#!" class="button" data-aos="fade"
+									>Learn More</a
+								>
+							</div>
+						</div>
+						<div class="column-two">
+							<div
+								class="column-two__image-wrapper"
+								data-aos="fade-up"
+							>
+								<img
+									src="./images/bg shapes.svg"
+									alt=""
+									class="column-two__bg-image"
+								/>
+								<img
+									src="./images/Appfolio Illu.svg"
+									alt=""
+									class="column-two__image"
+								/>
+							</div>
+						</div>
+					</div>
 
-          <!-- Fourth -->
-          <div class="split-column split-column--reverse mb-80">
-            <div class="column-one">
-              <div class="why-choose__content-wrapper">
-                <h3 class="mb-16" data-aos="fade">Additional Back-Office Services</h3>
-                <p class="mb-24" data-aos="fade">
-                  We also offer extended services for your back-office needs including Corporate Bookkeeping,
-                  Maintenance Coordination, and Property Improvement Loans.
-                </p>
-                <a href="#!" class="button" data-aos="fade">Learn More</a>
-              </div>
-            </div>
-            <div class="column-two">
-              <div class="column-two__image-wrapper" data-aos="fade-up">
-                <img src="./images/bg shapes.svg" alt="" class="column-two__bg-image" />
-                <img src="./images/Quickbook illu.svg" alt="" class="column-two__image" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#!" class="button button--ghost" data-aos="fade-up">See all services</a>
-      </div>
-    </section>
+					<!-- Fourth -->
+					<div class="split-column split-column--reverse mb-80">
+						<div class="column-one">
+							<div class="why-choose__content-wrapper">
+								<h3 class="mb-16" data-aos="fade">
+									Additional Back-Office Services
+								</h3>
+								<p class="mb-24" data-aos="fade">
+									We also offer extended services for your
+									back-office needs including Corporate
+									Bookkeeping, Maintenance Coordination, and
+									Property Improvement Loans.
+								</p>
+								<a href="#!" class="button" data-aos="fade"
+									>Learn More</a
+								>
+							</div>
+						</div>
+						<div class="column-two">
+							<div
+								class="column-two__image-wrapper"
+								data-aos="fade-up"
+							>
+								<img
+									src="./images/bg shapes.svg"
+									alt=""
+									class="column-two__bg-image"
+								/>
+								<img
+									src="./images/Quickbook illu.svg"
+									alt=""
+									class="column-two__image"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#!" class="button button--ghost" data-aos="fade-up"
+					>See all services</a
+				>
+			</div>
+		</section>
 
-    <!-- ########## Reviews ########## -->
-    <section class="section reviews">
-      <div class="container flex flex-d-column flex-ai-c">
-        <div class="heading-wrapper mb-64">
-          <h2 class="mb-24 long" data-aos="fade-up">Client Reviews & Testimonials</h2>
-          <p class="mb-32 long" data-aos="fade-up">
-            Here’s what our clients are saying about APM Help’s rental property management.
-          </p>
-          <a href="#!" class="button button--ghost" data-aos="fade-up">See all reviews</a>
-        </div>
-        <!-- Swiper Slider -->
-        <div class="swiper-container" data-aos="fade-up">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="review">
-                <img src="./images/quote.svg" alt="" class="review__quote" />
-                <p class="review__p">
-                  All along the way, they kept us informed, asked clarifying questions, and communicated fully to us. My
-                  accounts are now what I would call “audit proof.” Having the APM system perform daily audit checks
-                  along with the APM team performing the monthly Trust Account.<br /><br />
-                  Reconciliation is something that we make sure our owners know about and gives them, along with
-                  potential new clients, and added layer of confidence in our company.
-                </p>
-                <div class="review__profile">
-                  <img src="./images/avater1.jpg" alt="" class="review__avater" />
-                  <h5 class="review__name">Robert Dell’Osso</h5>
-                  <p class="review__job">Master Key Property Management</p>
-                </div>
-              </div>
-            </div>
-            <!-- Second -->
-            <div class="swiper-slide">
-              <div class="review">
-                <img src="./images/quote.svg" alt="" class="review__quote" />
-                <p class="review__p">
-                  Reconciliation is something that we make sure our owners know about and gives them, along with
-                  potential new clients, and added layer of confidence in our company.
-                  <br /><br />
-                  All along the way, they kept us informed, asked clarifying questions, and communicated fully to us. My
-                  accounts are now what I would call “audit proof.” Having the APM system perform daily audit checks
-                  along with the APM team performing the monthly Trust Account.
-                </p>
-                <div class="review__profile">
-                  <img src="./images/avater2.jpg" alt="" class="review__avater" />
-                  <h5 class="review__name">Robert Dell’Osso</h5>
-                  <p class="review__job">Master Key Property Management</p>
-                </div>
-              </div>
-            </div>
-            <!-- Third -->
-            <div class="swiper-slide">
-              <div class="review">
-                <img src="./images/quote.svg" alt="" class="review__quote" />
-                <p class="review__p">
-                  All along the way, they kept us informed, asked clarifying questions, and communicated fully to us. My
-                  accounts are now what I would call “audit proof.” Having the APM system perform daily audit checks
-                  along with the APM team performing the monthly Trust Account.<br /><br />
-                  Reconciliation is something that we make sure our owners know about and gives them, along with
-                  potential new clients, and added layer of confidence in our company.
-                </p>
-                <div class="review__profile">
-                  <img src="./images/avater3.jpg" alt="" class="review__avater" />
-                  <h5 class="review__name">Robert Dell’Osso</h5>
-                  <p class="review__job">Master Key Property Management</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
+		<!-- ########## Reviews ########## -->
+		<section class="section reviews">
+			<div class="container flex flex-d-column flex-ai-c">
+				<div class="heading-wrapper mb-64">
+					<h2 class="mb-24 long" data-aos="fade-up">
+						Client Reviews & Testimonials
+					</h2>
+					<p class="mb-32 long" data-aos="fade-up">
+						Here’s what our clients are saying about APM Help’s
+						rental property management.
+					</p>
+					<a href="#!" class="button button--ghost" data-aos="fade-up"
+						>See all reviews</a
+					>
+				</div>
+				<!-- Swiper Slider -->
+				<div class="swiper-container" data-aos="fade-up">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="review">
+								<img
+									src="./images/quote.svg"
+									alt=""
+									class="review__quote"
+								/>
+								<p class="review__p">
+									All along the way, they kept us informed,
+									asked clarifying questions, and communicated
+									fully to us. My accounts are now what I
+									would call “audit proof.” Having the APM
+									system perform daily audit checks along with
+									the APM team performing the monthly Trust
+									Account.<br /><br />
+									Reconciliation is something that we make
+									sure our owners know about and gives them,
+									along with potential new clients, and added
+									layer of confidence in our company.
+								</p>
+								<div class="review__profile">
+									<img
+										src="./images/avater1.jpg"
+										alt=""
+										class="review__avater"
+									/>
+									<h5 class="review__name">
+										Robert Dell’Osso
+									</h5>
+									<p class="review__job">
+										Master Key Property Management
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- Second -->
+						<div class="swiper-slide">
+							<div class="review">
+								<img
+									src="./images/quote.svg"
+									alt=""
+									class="review__quote"
+								/>
+								<p class="review__p">
+									Reconciliation is something that we make
+									sure our owners know about and gives them,
+									along with potential new clients, and added
+									layer of confidence in our company.
+									<br /><br />
+									All along the way, they kept us informed,
+									asked clarifying questions, and communicated
+									fully to us. My accounts are now what I
+									would call “audit proof.” Having the APM
+									system perform daily audit checks along with
+									the APM team performing the monthly Trust
+									Account.
+								</p>
+								<div class="review__profile">
+									<img
+										src="./images/avater2.jpg"
+										alt=""
+										class="review__avater"
+									/>
+									<h5 class="review__name">
+										Robert Dell’Osso
+									</h5>
+									<p class="review__job">
+										Master Key Property Management
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- Third -->
+						<div class="swiper-slide">
+							<div class="review">
+								<img
+									src="./images/quote.svg"
+									alt=""
+									class="review__quote"
+								/>
+								<p class="review__p">
+									All along the way, they kept us informed,
+									asked clarifying questions, and communicated
+									fully to us. My accounts are now what I
+									would call “audit proof.” Having the APM
+									system perform daily audit checks along with
+									the APM team performing the monthly Trust
+									Account.<br /><br />
+									Reconciliation is something that we make
+									sure our owners know about and gives them,
+									along with potential new clients, and added
+									layer of confidence in our company.
+								</p>
+								<div class="review__profile">
+									<img
+										src="./images/avater3.jpg"
+										alt=""
+										class="review__avater"
+									/>
+									<h5 class="review__name">
+										Robert Dell’Osso
+									</h5>
+									<p class="review__job">
+										Master Key Property Management
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
 
-    <!-- ########## CTA ########## -->
-    <section class="section cta p0">
-      <div class="container">
-        <div class="cta-wrapper" data-aos="fade-up">
-          <div class="cta__content-wrapper">
-            <h2 class="cta__heading mb-24" data-aos="fade-up">
-              Ready to work with the experts in rental property management?
-            </h2>
-            <p class="cta__p mb-32" data-aos="fade-up">We typically respond in <b>under 10 minutes!</b></p>
-            <a href="#!" class="button m0" data-aos="fade-up">get started now</a>
-          </div>
-          <img src="./images/cta-placeholder-image.png" alt="" class="cta__image" />
-        </div>
-      </div>
-    </section>
+		<!-- ########## CTA ########## -->
+		<section class="section cta p0">
+			<div class="container">
+				<div class="cta-wrapper" data-aos="fade-up">
+					<div class="cta__content-wrapper">
+						<h2 class="cta__heading mb-24" data-aos="fade-up">
+							Ready to work with the experts in rental property
+							management?
+						</h2>
+						<p class="cta__p mb-32" data-aos="fade-up">
+							We typically respond in
+							<b>under 10 minutes!</b>
+						</p>
+						<a href="#!" class="button m0" data-aos="fade-up"
+							>get started now</a
+						>
+					</div>
+					<img
+						src="./images/cta-placeholder-image.png"
+						alt=""
+						class="cta__image"
+					/>
+				</div>
+			</div>
+		</section>
 
-    <!-- ########## Blog ########## -->
-    <section class="section home-blog">
-      <div class="container flex flex-d-column flex-ai-c">
-        <div class="heading-wrapper mb-64">
-          <h2 class="mb-24 long" data-aos="fade-up">APM Help’s Blog</h2>
-          <p class="mb-32 long" data-aos="fade-up">
-            Everything yoou need to know about rental property management and related softwares.
-          </p>
-          <a href="#!" class="button button--ghost" data-aos="fade-up">See all articles</a>
-        </div>
-        <div class="home-blog__cards">
-          <!-- First -->
-          <a href="#!">
-            <div class="home-blog__card" data-aos="fade-up" data-aos-delay="50">
-              <img src="./images/blog image 1.webp" alt="blog" class="home-blog__image mb-24" />
-              <div class="hone-blog__content-wrapper">
-                <h6 class="home-blog__sub-heading mb-8">Appfolio</h6>
-                <h3 class="home-blog__heading mb-24">Managing vacation rentals in AppFolio</h3>
-                <p class="home-blog__p mb-24">
-                  APM Help helps property management companies scale effectively by providing a network of complimentary
-                  bookkeeping and consulting services. Our Trust Account Bookkeeping service includes all back-office
-                  accounting through the clients online property management software, which allows our clients to focus
-                  on growing their business.
-                </p>
-                <a href="#!" class="button home-blog__button m0">Read more</a>
-              </div>
-            </div>
-          </a>
+		<!-- ########## Blog ########## -->
+		<section class="section home-blog">
+			<div class="container flex flex-d-column flex-ai-c">
+				<div class="heading-wrapper mb-64">
+					<h2 class="mb-24 long" data-aos="fade-up">
+						APM Help’s Blog
+					</h2>
+					<p class="mb-32 long" data-aos="fade-up">
+						Everything yoou need to know about rental property
+						management and related softwares.
+					</p>
+					<a href="#!" class="button button--ghost" data-aos="fade-up"
+						>See all articles</a
+					>
+				</div>
+				<div class="home-blog__cards">
+					<!-- First -->
+					<a href="#!">
+						<div
+							class="home-blog__card"
+							data-aos="fade-up"
+							data-aos-delay="50"
+						>
+							<img
+								src="./images/blog image 1.webp"
+								alt="blog"
+								class="home-blog__image mb-24"
+							/>
+							<div class="hone-blog__content-wrapper">
+								<h6 class="home-blog__sub-heading mb-8">
+									Appfolio
+								</h6>
+								<h3 class="home-blog__heading mb-24">
+									Managing vacation rentals in AppFolio
+								</h3>
+								<p class="home-blog__p mb-24">
+									APM Help helps property management companies
+									scale effectively by providing a network of
+									complimentary bookkeeping and consulting
+									services. Our Trust Account Bookkeeping
+									service includes all back-office accounting
+									through the clients online property
+									management software, which allows our
+									clients to focus on growing their business.
+								</p>
+								<a href="#!" class="button home-blog__button m0"
+									>Read more</a
+								>
+							</div>
+						</div>
+					</a>
 
-          <!-- Second -->
-          <a href="#!">
-            <div class="home-blog__card" data-aos="fade-up" data-aos-delay="100">
-              <img src="./images/blog image 2.webp" alt="blog" class="home-blog__image mb-24" />
-              <div class="hone-blog__content-wrapper">
-                <h6 class="home-blog__sub-heading mb-8">Appfolio</h6>
-                <h3 class="home-blog__heading mb-24">Am I overstating income on my 1099-MISCs?</h3>
-                <p class="home-blog__p mb-24">
-                  January is a stressful time of year, mainly due to taxes. If you’re in the world of property
-                  management, you are most likely worried about the accuracy of your 1099-MISCs and NECs. There are a
-                  lot of things that need to be reviewed before you finalize your 1099s, one of those things being
-                  prepaid rent.…
-                </p>
-                <a href="#!" class="button home-blog__button m0">Read more</a>
-              </div>
-            </div>
-          </a>
+					<!-- Second -->
+					<a href="#!">
+						<div
+							class="home-blog__card"
+							data-aos="fade-up"
+							data-aos-delay="100"
+						>
+							<img
+								src="./images/blog image 2.webp"
+								alt="blog"
+								class="home-blog__image mb-24"
+							/>
+							<div class="hone-blog__content-wrapper">
+								<h6 class="home-blog__sub-heading mb-8">
+									Appfolio
+								</h6>
+								<h3 class="home-blog__heading mb-24">
+									Am I overstating income on my 1099-MISCs?
+								</h3>
+								<p class="home-blog__p mb-24">
+									January is a stressful time of year, mainly
+									due to taxes. If you’re in the world of
+									property management, you are most likely
+									worried about the accuracy of your
+									1099-MISCs and NECs. There are a lot of
+									things that need to be reviewed before you
+									finalize your 1099s, one of those things
+									being prepaid rent.…
+								</p>
+								<a href="#!" class="button home-blog__button m0"
+									>Read more</a
+								>
+							</div>
+						</div>
+					</a>
 
-          <!-- Third -->
-          <a href="#!">
-            <div class="home-blog__card" data-aos="fade-up" data-aos-delay="150">
-              <img src="./images/blog image 3.webp" alt="blog" class="home-blog__image mb-24" />
-              <div class="hone-blog__content-wrapper">
-                <h6 class="home-blog__sub-heading mb-8">Appfolio</h6>
-                <h3 class="home-blog__heading mb-24">How to Check if Your Books Are Audit-Ready</h3>
-                <p class="home-blog__p mb-24">
-                  If your trust accounts were audited today, would your books pass? The answer may surprise you. Check
-                  out today’s blog to determine how well your company would do.
-                </p>
-                <a href="#!" class="button home-blog__button m0">Read more</a>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+					<!-- Third -->
+					<a href="#!">
+						<div
+							class="home-blog__card"
+							data-aos="fade-up"
+							data-aos-delay="150"
+						>
+							<img
+								src="./images/blog image 3.webp"
+								alt="blog"
+								class="home-blog__image mb-24"
+							/>
+							<div class="hone-blog__content-wrapper">
+								<h6 class="home-blog__sub-heading mb-8">
+									Appfolio
+								</h6>
+								<h3 class="home-blog__heading mb-24">
+									How to Check if Your Books Are Audit-Ready
+								</h3>
+								<p class="home-blog__p mb-24">
+									If your trust accounts were audited today,
+									would your books pass? The answer may
+									surprise you. Check out today’s blog to
+									determine how well your company would do.
+								</p>
+								<a href="#!" class="button home-blog__button m0"
+									>Read more</a
+								>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
 
-    <!-- ########## Contact ########## -->
-    <section class="section contact" id="contact">
-      <div class="container flex flex-d-column flex-ai-c">
-        <div class="heading-wrapper mb-64">
-          <h2 class="mb-24 long" data-aos="fade-up">We typically respond in under 10 minutes.</h2>
-          <p class="mb-32 long" data-aos="fade-up">
-            Want to find out what APM Help can do for you? Enjoy a complimentary 30-minute session with one of our
-            rental property management and bookkeeping support experts and we’ll help get you on the right track in no
-            time.
-          </p>
-        </div>
-        <div class="contact__container">
-          <div class="contact__info-wrapper">
-            <img
-              src="./images/location icon.svg"
-              alt="Contact Information"
-              class="contact__icon mb-24"
-              data-aos="fade"
-            />
-            <h3 class="contact__heading mb-40" data-aos="fade">Contact information</h3>
-            <div class="contact__info-items">
-              <div class="contact__info-item" data-aos="fade-up">
-                <p class="contact__info-label">Phone</p>
-                <h4 class="contact__info-info">+95 962 323 716</h4>
-              </div>
-              <div class="contact__info-item" data-aos="fade-up">
-                <p class="contact__info-label">Email</p>
-                <h4 class="contact__info-info">yaunghein@protonmail.com</h4>
-              </div>
-              <div class="contact__info-item" data-aos="fade-up">
-                <p class="contact__info-label">Address</p>
-                <h4 class="contact__info-info">576 East Highway 138 Suite #210 Stansbury Park, UT, 84074</h4>
-              </div>
-              <div class="contact__info-item" data-aos="fade-up">
-                <p class="contact__info-label">Opening times</p>
-                <h4 class="contact__info-info">Mon - Sat 8:00 a.m. - 6:00 p.m. Sunday - Closed.</h4>
-              </div>
-            </div>
-          </div>
-          <div class="contact__form-wrapper">
-            <img src="./images/form icon.svg" alt="Contact Form" class="contact__icon mb-24" data-aos="fade" />
-            <h3 class="contact__heading mb-40" data-aos="fade">Fill out the form below.</h3>
-            <form class="contact__form" data-aos="fade-up">
-              <div class="contact__form-input-wrapper mb-16">
-                <label for="firstName" class="contact__form-label mb-8">First name*</label>
-                <input type="text" class="contact__form-input" id="firstName" />
-              </div>
-              <div class="contact__form-input-wrapper mb-16">
-                <label for="lastName" class="contact__form-label mb-8">Last name*</label>
-                <input type="text" class="contact__form-input" id="lastName" />
-              </div>
-              <div class="contact__form-input-wrapper mb-16">
-                <label for="email" class="contact__form-label mb-8">Email*</label>
-                <input type="text" class="contact__form-input" id="email" />
-              </div>
-              <div class="contact__form-input-wrapper mb-16">
-                <label for="phone" class="contact__form-label mb-8">Phone number*</label>
-                <input type="text" class="contact__form-input" id="phone" />
-              </div>
-              <div class="contact__form-input-wrapper mb-16">
-                <label for="software" class="contact__form-label mb-8">Which software are you currently using?*</label>
-                <select name="software" id="software-select" class="contact__form-input">
-                  <option value="">Please Select</option>
-                  <option value="dog">Appfolio</option>
-                  <option value="cat">Buildium</option>
-                  <option value="hamster">Calibra</option>
-                  <option value="parrot">Propertyware</option>
-                  <option value="spider">Rent Manager</option>
-                  <option value="goldfish">Quickbooks</option>
-                </select>
-              </div>
-              <div class="contact__form-input-wrapper mb-16">
-                <label for="hear-from" class="contact__form-label mb-8">How did you hear about us?</label>
-                <select name="hear-from" id="hear-from-select" class="contact__form-input">
-                  <option value="">Please Select</option>
-                  <option value="dog">Google Search</option>
-                  <option value="cat">Facebook</option>
-                  <option value="hamster">LinkedIn</option>
-                  <option value="parrot">Instagram</option>
-                  <option value="spider">Word Of Mouth</option>
-                </select>
-              </div>
-              <div class="contact__form-input-wrapper mb-32">
-                <label for="message" class="contact__form-label mb-8">Your message*</label>
-                <input type="text" class="contact__form-input" id="message" />
-              </div>
-              <button type="submit" class="button contact__button">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- ########## Contact ########## -->
+		<section class="section contact" id="contact">
+			<div class="container flex flex-d-column flex-ai-c">
+				<div class="heading-wrapper mb-64">
+					<h2 class="mb-24 long" data-aos="fade-up">
+						We typically respond in under 10 minutes.
+					</h2>
+					<p class="mb-32 long" data-aos="fade-up">
+						Want to find out what APM Help can do for you? Enjoy a
+						complimentary 30-minute session with one of our rental
+						property management and bookkeeping support experts and
+						we’ll help get you on the right track in no time.
+					</p>
+				</div>
+				<div class="contact__container">
+					<div class="contact__info-wrapper">
+						<img
+							src="./images/location icon.svg"
+							alt="Contact Information"
+							class="contact__icon mb-24"
+							data-aos="fade"
+						/>
+						<h3 class="contact__heading mb-40" data-aos="fade">
+							Contact information
+						</h3>
+						<div class="contact__info-items">
+							<div class="contact__info-item" data-aos="fade-up">
+								<p class="contact__info-label">Phone</p>
+								<h4 class="contact__info-info">
+									+95 962 323 716
+								</h4>
+							</div>
+							<div class="contact__info-item" data-aos="fade-up">
+								<p class="contact__info-label">Email</p>
+								<h4 class="contact__info-info">
+									yaunghein@protonmail.com
+								</h4>
+							</div>
+							<div class="contact__info-item" data-aos="fade-up">
+								<p class="contact__info-label">Address</p>
+								<h4 class="contact__info-info">
+									576 East Highway 138 Suite #210 Stansbury
+									Park, UT, 84074
+								</h4>
+							</div>
+							<div class="contact__info-item" data-aos="fade-up">
+								<p class="contact__info-label">Opening times</p>
+								<h4 class="contact__info-info">
+									Mon - Sat 8:00 a.m. - 6:00 p.m. Sunday -
+									Closed.
+								</h4>
+							</div>
+						</div>
+					</div>
+					<div class="contact__form-wrapper">
+						<img
+							src="./images/form icon.svg"
+							alt="Contact Form"
+							class="contact__icon mb-24"
+							data-aos="fade"
+						/>
+						<h3 class="contact__heading mb-40" data-aos="fade">
+							Fill out the form below.
+						</h3>
+						<form class="contact__form" data-aos="fade-up">
+							<div class="contact__form-input-wrapper mb-16">
+								<label
+									for="firstName"
+									class="contact__form-label mb-8"
+									>First name*</label
+								>
+								<input
+									type="text"
+									class="contact__form-input"
+									id="firstName"
+								/>
+							</div>
+							<div class="contact__form-input-wrapper mb-16">
+								<label
+									for="lastName"
+									class="contact__form-label mb-8"
+									>Last name*</label
+								>
+								<input
+									type="text"
+									class="contact__form-input"
+									id="lastName"
+								/>
+							</div>
+							<div class="contact__form-input-wrapper mb-16">
+								<label
+									for="email"
+									class="contact__form-label mb-8"
+									>Email*</label
+								>
+								<input
+									type="text"
+									class="contact__form-input"
+									id="email"
+								/>
+							</div>
+							<div class="contact__form-input-wrapper mb-16">
+								<label
+									for="phone"
+									class="contact__form-label mb-8"
+									>Phone number*</label
+								>
+								<input
+									type="text"
+									class="contact__form-input"
+									id="phone"
+								/>
+							</div>
+							<div class="contact__form-input-wrapper mb-16">
+								<label
+									for="software"
+									class="contact__form-label mb-8"
+									>Which software are you currently
+									using?*</label
+								>
+								<select
+									name="software"
+									id="software-select"
+									class="contact__form-input"
+								>
+									<option value="">Please Select</option>
+									<option value="dog">Appfolio</option>
+									<option value="cat">Buildium</option>
+									<option value="hamster">Calibra</option>
+									<option value="parrot">Propertyware</option>
+									<option value="spider">Rent Manager</option>
+									<option value="goldfish">Quickbooks</option>
+								</select>
+							</div>
+							<div class="contact__form-input-wrapper mb-16">
+								<label
+									for="hear-from"
+									class="contact__form-label mb-8"
+									>How did you hear about us?</label
+								>
+								<select
+									name="hear-from"
+									id="hear-from-select"
+									class="contact__form-input"
+								>
+									<option value="">Please Select</option>
+									<option value="dog">Google Search</option>
+									<option value="cat">Facebook</option>
+									<option value="hamster">LinkedIn</option>
+									<option value="parrot">Instagram</option>
+									<option value="spider">
+										Word Of Mouth
+									</option>
+								</select>
+							</div>
+							<div class="contact__form-input-wrapper mb-32">
+								<label
+									for="message"
+									class="contact__form-label mb-8"
+									>Your message*</label
+								>
+								<input
+									type="text"
+									class="contact__form-input"
+									id="message"
+								/>
+							</div>
+							<button
+								type="submit"
+								class="button contact__button"
+							>
+								Send Message
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__top">
-          <div class="footer__column" data-aos="fade-up" data-aos-delay="50">
-            <img src="./images/white-apmhelp-logo.svg" alt="APM Help" />
-          </div>
-          <div class="footer__column" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="mb-24">Menu</h3>
-            <a href="#!" class="footer__link">Services</a>
-            <a href="#!" class="footer__link">Reviews</a>
-            <a href="#!" class="footer__link">Blog</a>
-            <a href="#!" class="footer__link">Career</a>
-            <a href="#!" class="footer__link">Contact</a>
-          </div>
-          <div class="footer__column" data-aos="fade-up" data-aos-delay="150">
-            <h3 class="mb-24">Services</h3>
-            <a href="#!" class="footer__link">Property Management Software Consulting </a>
-            <a href="#!" class="footer__link">Trust Account Bookkeeping</a>
-            <a href="#!" class="footer__link">Corporate Account Bookkeeping</a>
-            <a href="#!" class="footer__link">Daily Bank Reconciliations</a>
-            <a href="#!" class="footer__link">Daily Audits</a>
-            <a href="#!" class="footer__link">Full-service Maintenance Coordination</a>
-            <a href="#!" class="footer__link">Brokerage Growth</a>
-          </div>
-          <div class="footer__column" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="mb-24">Disclaimer</h3>
-            <p class="footer__disclaimer">
-              AppFolio, Buildium, and Propertyware are trademarks of their respective companies to which we are not
-              officially associated.
-            </p>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p class="footer__copy-right">
-            Designed & Developed by
-            <a target="blank" href="https://www.linkedin.com/in/yanaunghein"><u>Yaung Hein</u> 🥳</a>
-          </p>
-          <div class="footer__social-links">
-            <p class="find-us-on">Find us on:</p>
-            <div class="footer__social-links-wrapper">
-              <img src="./images/Facebook Icon White.svg" alt="" class="footer__social-link" />
-              <img src="./images/LinkedIn Icon White.svg" alt="" class="footer__social-link" />
-              <img src="./images/Instagram Icon White.svg" alt="" class="footer__social-link" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="footer-filler"></div>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div
+						class="footer__column"
+						data-aos="fade-up"
+						data-aos-delay="50"
+					>
+						<img
+							src="./images/white-apmhelp-logo.svg"
+							alt="APM Help"
+						/>
+					</div>
+					<div
+						class="footer__column"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<h3 class="mb-24">Menu</h3>
+						<a href="#!" class="footer__link">Services</a>
+						<a href="#!" class="footer__link">Reviews</a>
+						<a href="#!" class="footer__link">Blog</a>
+						<a href="#!" class="footer__link">Career</a>
+						<a href="#!" class="footer__link">Contact</a>
+					</div>
+					<div
+						class="footer__column"
+						data-aos="fade-up"
+						data-aos-delay="150"
+					>
+						<h3 class="mb-24">Services</h3>
+						<a href="#!" class="footer__link"
+							>Property Management Software Consulting
+						</a>
+						<a href="#!" class="footer__link"
+							>Trust Account Bookkeeping</a
+						>
+						<a href="#!" class="footer__link"
+							>Corporate Account Bookkeeping</a
+						>
+						<a href="#!" class="footer__link"
+							>Daily Bank Reconciliations</a
+						>
+						<a href="#!" class="footer__link">Daily Audits</a>
+						<a href="#!" class="footer__link"
+							>Full-service Maintenance Coordination</a
+						>
+						<a href="#!" class="footer__link">Brokerage Growth</a>
+					</div>
+					<div
+						class="footer__column"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<h3 class="mb-24">Disclaimer</h3>
+						<p class="footer__disclaimer">
+							AppFolio, Buildium, and Propertyware are trademarks
+							of their respective companies to which we are not
+							officially associated.
+						</p>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__copy-right">
+						Designed & Developed by
+						<a
+							target="blank"
+							href="https://www.linkedin.com/in/yanaunghein"
+							><u>Yaung Hein</u> 🥳</a
+						>
+					</p>
+					<div class="footer__social-links">
+						<p class="find-us-on">Find us on:</p>
+						<div class="footer__social-links-wrapper">
+							<img
+								src="./images/Facebook Icon White.svg"
+								alt=""
+								class="footer__social-link"
+							/>
+							<img
+								src="./images/LinkedIn Icon White.svg"
+								alt=""
+								class="footer__social-link"
+							/>
+							<img
+								src="./images/Instagram Icon White.svg"
+								alt=""
+								class="footer__social-link"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="footer-filler"></div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./src/js/script.js"></script>
-    <script src="./src/js/animation.js"></script>
-  </body>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="./src/js/script.js"></script>
+		<script src="./src/js/animation.js"></script>
+	</body>
 </html>
